@@ -598,6 +598,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>It is also necessary to add the Ant Design CSS stylesheet to your HTML page. You can either include a precompiled version of the CSS via <a href="https://cdnjs.com/libraries/antd">CDN</a>, or follow the instructions for customization with LESS <a href="https://ant.design/docs/react/customize-theme">here</a>.</p>
 </div>
+<div class="paragraph">
+<p>Note that both the version numbers of the CSS stylesheet and <code>cljsjs/antd</code> (ie: the Ant Design JavaScript library) being used should match to prevent any styling issues. Use this command to see the version of the <code>cljsjs/antd</code> library being depended upon within your project:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="bash">lein deps :tree</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1056,7 +1064,7 @@ any ClojureScript operations are to be performed on them.</p>
 </div>
 <div class="paragraph">
 <p>It is recommended to place the locale provider at the top level of the application.
-The whole list of supported locales can be found <a href="https://github.com/ant-design/ant-design/tree/master/components/locale-provider">here</a>.</p>
+The whole list of supported locales can be found <a href="https://ant.design/docs/react/i18n#LocaleProvider">here</a>.</p>
 </div>
 <div class="paragraph">
 <p>To add a new language, please refer to <a href="https://ant.design/components/locale-provider/#Add-a-new-language">this</a>.</p>
@@ -1315,7 +1323,7 @@ any ClojureScript operations are to be performed on them.</p>
 </div>
 <div class="paragraph">
 <p>It is recommended to place the locale provider at the top level of the application.
-The whole list of supported locales can be found <a href="https://github.com/ant-design/ant-design/tree/master/components/locale-provider">here</a>.</p>
+The whole list of supported locales can be found <a href="https://ant.design/docs/react/i18n#LocaleProvider">here</a>.</p>
 </div>
 <div class="paragraph">
 <p>To add a new language, please refer to <a href="https://ant.design/components/locale-provider/#Add-a-new-language">this</a>.</p>
@@ -1434,7 +1442,7 @@ otherwise the date locale will not be picked up by the component.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-06-30 19:06:14 SGT
+Last updated 2017-07-01 07:39:09 SGT
 </div>
 </div>
 </body>
