@@ -10,9 +10,10 @@ Ant Design is an enterprise-class UI design language and React-based implementat
 
 ## Resources
 
-Reagent Demo
-Rum Demo
-Antizer Documentation
+* Reagent Demo https://priornix.github.io/antizer/latest/examples/reagent.html
+* Rum Demo https://priornix.github.io/antizer/latest/examples/rum.html
+* Antizer Documentation https://priornix.github.io/antizer/latest/
+* API Documentation https://priornix.github.io/antizer/latest/api/
 
 ## Usage 
 
@@ -34,7 +35,7 @@ For Rum:
 [rum "X.Y.Z"]
 ```
 
-It is also necessary to add the Ant Design CSS stylesheet to your HTML page. You can either include a precompiled version of the CSS via https://cdnjs.com/libraries/antd[CDN], or follow the instructions for customization with LESS https://ant.design/docs/react/customize-theme[here].
+It is also necessary to add the Ant Design CSS stylesheet to your HTML page. You can either include a precompiled version of the CSS via [CDN](https://cdnjs.com/libraries/antd), or follow the instructions for customization with LESS [here](https://ant.design/docs/react/customize-theme).
 
 ### Quick Example
 
@@ -72,7 +73,6 @@ lein with-profile +examples cljsbuild once
 
 To compile the examples and enable hot reloading with figwheel:
 
-[source,bash]
 ```bash
 lein with-profile +examples-dev figwheel
 ```

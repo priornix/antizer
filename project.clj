@@ -10,5 +10,5 @@
   :plugins [[lein-codox "0.10.3"]]
   :codox {:language :clojurescript
           :metadata {:doc/format :markdown}
-          :output-path "doc/dist/api"
+          :output-path "doc/dist/latest/api"
           :namespaces [antizer.core antizer.reagent antizer.rum]})

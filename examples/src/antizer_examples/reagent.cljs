@@ -287,7 +287,9 @@
             (r/as-element
               [ant/row
                 [ant/col {:span 12} [:h2 "Antizer Reagent Example"]]
-                [ant/col {:span 1 :offset 11} [:a {:href "src"} [ant/icon {:class "banner-logo" :type "github"}]]]])]]
+                [ant/col {:span 1 :offset 11} 
+                  [:a {:href "https://github.com/priornix/antizer"} 
+                    [ant/icon {:class "banner-logo" :type "github"}]]]])]]
         [ant/layout
           [ant/layout-sider
             [side-menu]]

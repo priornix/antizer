@@ -10,13 +10,13 @@ clean:
 
 doc:
 	mkdir -p dist/doc/
-	asciidoctor -o dist/doc/latest/index.html content.adoc
+	asciidoctor -o dist/latest/index.html content.adoc
 
 examples:
-	mkdir -p dist/examples/
-	cd .. && rsync -av --progress examples/resources/ doc/dist/examples --exclude js/
+	mkdir -p dist/doc/examples/
+	cd .. && rsync -av --progress examples/resources/ doc/dist/latest/examples --exclude js/
 	lein with-profile +examples-dist cljsbuild once
 
-github: doc examples
+github:
 	ghp-import -m "Generate documentation" -b gh-pages dist/
 	git push origin gh-pages

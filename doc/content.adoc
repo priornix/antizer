@@ -41,14 +41,12 @@ For Rum:
 
 It is also necessary to add the Ant Design CSS stylesheet to your HTML page. You can either include a precompiled version of the CSS via https://cdnjs.com/libraries/antd[CDN], or follow the instructions for customization with LESS https://ant.design/docs/react/customize-theme[here].
 
-== Demo and Documentation
+== Resources
 
-The following are examples of how Antizer is implemented in the supported ClojureScript React libraries.
+* Reagent Example https://priornix.github.io/antizer/latest/examples/reagent.html
+* Rum Example https://priornix.github.io/antizer/latest/examples/rum.html
 
-* Reagent Example  
-* Rum Example
-
-The API documentation can be found here: http://priornix.github.io/antizer/api/latest.html
+The API documentation can be found here: https://priornix.github.io/antizer/latest/api/
 
 == Quick Example
 

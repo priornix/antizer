@@ -286,7 +286,9 @@
         (ant/layout-header {:class "banner"}
           (ant/row
             (ant/col {:span 12} [:h2 {:key "layout"} "Antizer Rum Example"])
-            (ant/col {:span 1 :offset 11} [:a {:href "src" :key "link"} (ant/icon {:class "banner-logo" :type "github"})]))))
+            (ant/col {:span 1 :offset 11} 
+              [:a {:href "https://github.com/priornix/antizer" :key "link"} 
+                (ant/icon {:class "banner-logo" :type "github"})]))))
       (ant/layout
         (ant/layout-sider
           (side-menu))
