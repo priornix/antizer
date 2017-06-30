@@ -38,6 +38,12 @@ For Rum:
 
 It is also necessary to add the Ant Design CSS stylesheet to your HTML page. You can either include a precompiled version of the CSS via [CDN](https://cdnjs.com/libraries/antd), or follow the instructions for customization with LESS [here](https://ant.design/docs/react/customize-theme).
 
+Note that both the version numbers of the CSS stylesheet and `cljsjs/antd` (ie: the Ant Design JavaScript library) being used should match to prevent any styling issues. Use this command to see the version of the `cljsjs/antd` library being depended upon within your project:
+
+```bash
+lein deps :tree
+```
+
 ### Quick Example
 
 For Reagent:

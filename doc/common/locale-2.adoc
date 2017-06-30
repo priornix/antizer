@@ -1,5 +1,5 @@
 It is recommended to place the locale provider at the top level of the application.
-The whole list of supported locales can be found https://github.com/ant-design/ant-design/tree/master/components/locale-provider[here].
+The whole list of supported locales can be found https://ant.design/docs/react/i18n#LocaleProvider[here].
 
 To add a new language, please refer to https://ant.design/components/locale-provider/#Add-a-new-language[this].
 
