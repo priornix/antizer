@@ -1,0 +1,4 @@
+===== Form creation
+Antizer supports the use of https://ant.design/components/form/#Form.create(options)[Form.create()] which helps to collect and validate the form data automatically. If you prefer to do this manually or prefer using another validation library, you can skip the section below and use the the Form API found https://ant.design/components/form/#API[here]. 
+
+The following is an example of how to use Antizer's implementation of `Form.create()`:

@@ -1,0 +1,1 @@
+Antizer supports the use of locale provider to provide localization / i18n support.

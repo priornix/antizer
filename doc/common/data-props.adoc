@@ -1,0 +1,12 @@
+// tag::warning1[]
+[WARNING]
+====
+// end::warning1[]
+
+// tag::text[]
+Any properties that begins with `data` has to be in camel case instead of kebab case, as they will be treated as html attributes. Thus, *DO NOT* use `data-index` and `data-source` as they would not work, use `dataIndex` and `dataSource` instead.
+// end::text[]
+
+// tag::warning2[]
+====
+// end::warning2[]

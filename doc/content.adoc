@@ -1,0 +1,467 @@
+= Antizer - ClojureScript library for Ant Design React components
+Michael Lim <priornix@gmail.com>
+:icons: font
+:toc: left
+:toclevels: 3
+:source-highlighter: pygments
+:pygments-style: friendly
+
+== Introduction
+
+Ant Design is an enterprise-class UI design language and React-based implementation. It has the following features:
+
+* An enterprise-class UI design language for web applications.
+* A set of high-quality React components out of the box.
+* Extensive well-documented API and examples.
+
+Antizer is a ClojureScript library for Ant Design React components with bindings for Reagent and Rum. 
+
+== Install
+
+To use antizer, just add the following to your `project.clj`:
+
+[source,clojure]
+----
+[antizer "0.2.0"]
+----
+
+You would also need to add the ClojureScript React library that you will be using.
+
+For Reagent:
+[source,clojure]
+----
+[reagent "X.Y.Z"]
+----
+
+For Rum:
+[source,clojure]
+----
+[rum "X.Y.Z"]
+----
+
+It is also necessary to add the Ant Design CSS stylesheet to your HTML page. You can either include a precompiled version of the CSS via https://cdnjs.com/libraries/antd[CDN], or follow the instructions for customization with LESS https://ant.design/docs/react/customize-theme[here].
+
+== Demo and Documentation
+
+The following are examples of how Antizer is implemented in the supported ClojureScript React libraries.
+
+* Reagent Example  
+* Rum Example
+
+The API documentation can be found here: http://priornix.github.io/antizer/api/latest.html
+
+== Quick Example
+
+Here's the classic example to help you get started:
+
+For Reagent:
+[source,clojure]
+----
+(require '[antizer.reagent :as ant])
+(require '[reagent.core :as r])
+
+(defn render []
+  [ant/button {:on-click #(ant/message-info "Hello Reagent!")} "Click me"])
+
+(defn init! []
+  (r/render [render] (.-body js/document)))
+----
+
+For Rum:
+[source,clojure]
+----
+(require '[antizer.rum :as ant])
+(require '[rum.core :as rum])
+
+(defn render []
+  (ant/button {:on-click #(ant/message-info "Hello Rum!")} "Click me"))
+
+(defn init! []
+  (rum/mount (render) (.-body js/document)))
+----
+
+IMPORTANT: Please remember to include the CSS stylesheet https://cdnjs.com/libraries/antd[here], otherwise the components would not be styled correctly.
+
+TIP: It is not recommended to render to the <body> element. This is only done for illustrative purposes. 
+
+== Programming Guide
+
+=== Naming convention
+
+In order to be consistent with ClojureScript naming conventions, all functions and properties are specified in lisp case 
+(aka https://en.wikipedia.org/wiki/Naming_convention_%28programming%29#Multiple-word_identifiers[kebab-case]), eg: on-click, wrapper-col
+
+The Ant design component, functions and property have been translated to kebab-case, via the following rules:
+
+1. Replace all instances of `.` with `-`
+2. Insert a dash before any uppercase letters, except for the first letter.
+3. Convert the whole string to lowercase.
+
+.Example of name mappings
+|===
+|Ant Design component or function name |Antizer Name
+
+|Calendar
+|calendar
+
+|Checkbox.Group
+|checkbox-group
+
+|DatePicker.RangePicker
+|date-picker-range-picker
+
+|InputNumber
+|input-number
+
+|Modal.confirm
+|modal-confirm
+
+|notification.info
+|notification-info
+
+|===
+
+The full list of the Ant components and function names can be found here.
+
+=== Types 
+
+As can be seen from the module list here, there are three main types within the Antizer library that maps to the equivalent in the Ant Design library.
+
+* Functions
+* Properties
+* Components
+
+==== Functions
+
+These are just normal ClojureScript functions. All the functions reside in their UI respective library namespaces:
+
+Example for reagent:
+[source,clojure]
+----
+(require '[antizer.reagent :as ant])
+
+(ant/message-info "Hello World!")
+----
+
+Example for rum:
+[source,clojure]
+----
+(require '[antizer.rum :as ant])
+
+(ant/message-info "Hello World!")
+----
+==== Components 
+
+These are the backbone of the entire library. Please refer to the Components section of the respective
+ClojureScript React libraries. 
+
+==== Properties
+
+There is currently only one property type currently: `locales`. Please refer to the Localization section of
+the respective ClojureScript React libraries.
+
+=== Return Values
+include::common/return-values.adoc[tags=text]
+
+== Reagent
+
+==== Components
+
+The Antizer components can be treated like any Reagent components.
+To use them, wrap them in a Hiccup style list:
+
+[source,clojure]
+----
+(require '[antizer.reagent :as ant])
+
+(defn render-menu []
+  [ant/menu {:mode "inline" :theme "dark" :style {:height "100%" :width "20%"}
+             :on-click #(println "You have clicked" %1)}
+    [ant/menu-item {:key "item1"} "Menu Item 1"]
+    [ant/menu-item {:key "item2"} "Menu Item 2"]])
+----
+
+include::common/component-1.adoc[]
+
+In some cases, certain components (eg: `menu-sub-menu` and `tooltip`) can accept React.Elements as their properties. In such cases, please use `(reagent.core/as-element)` to turn Reagent’s hiccup forms into React elements.
+
+[source,clojure]
+----
+(require '[antizer.reagent :as ant])
+(require '[reagent.core :as r])
+
+(defn render-menu []
+  [ant/menu {:mode "inline" :theme "dark" :style {:height "100%" :width "20%"}}
+    ;; adds a sub-menu containing a "home" icon and "SubMenu 1" text
+    [ant/menu-sub-menu {:title
+                         (r/as-element
+                           [:span [ant/icon {:type "home"}] "SubMenu 1"])}]])
+----
+
+==== Forms
+
+include::common/form-1.adoc[]
+
+[source,clojure]
+----
+(require '[antizer.reagent :as ant])
+(require '[reagent.core :as r])
+
+(defn actual-form []
+  (fn [props]
+    (let [my-form (ant/get-form)]
+      [ant/form
+        [ant/form-item {:label "Name"}
+          (ant/decorate-field my-form "name"
+            [ant/input])]
+        [ant/form-item {:label "Password"}
+          ;; validates that the password field is not empty
+          (ant/decorate-field my-form "password" {:rules [{:required true}]}
+            [ant/input])]])))
+
+(defn init-form []
+  (ant/create-form (actual-form)))
+
+(defn init! []
+  (r/render [init-form] (.-body js/document)))
+----
+
+include::common/form-2.adoc[]
+
+In the case of Reagent, this can be done right at the start of the 
+render stage, by wrapping the Reagent Hiccup elements with a function. Next, call 
+`(antizer.reagent.get-form)` to obtain the form object that will be used by the 
+field decorator and form functions.
+
+It is recommended to pass in the React props to the form render function so that the 
+form object is accessible. This is needed in some cases like nested forms.
+
+TIP: Without the wrapper function, `(antizer.reagent.get-form)` would try to obtain 
+the form value before the component has been constructed, and thus a `nil` value 
+will be returned.
+
+include::common/form-3.adoc[]
+
+[source,clojure]
+----
+(require '[antizer.reagent :as ant])
+(require '[reagent.core :as r])
+
+(defn actual-form []
+  (fn [props]
+    (let [my-form (ant/get-form)]
+      [ant/form
+        [ant/form-item {:label "Name"}
+          (ant/decorate-field my-form "name" {:rules [{:required true :min 10}]}
+            [ant/input])]
+        [ant/form-item
+          [ant/button {:on-click #(ant/validate-fields my-form)} "Submit"]
+          [ant/button {:on-click #(ant/reset-fields my-form)} "Reset"]]])))
+
+(defn init-form []
+  (ant/create-form (actual-form)))
+
+(defn init! []
+  (r/render [init-form] (.-body js/document)))
+----
+
+include::common/form-4.adoc[]
+
+[[localization]]
+==== Localization / i18n
+
+===== Locale Provider
+
+include::common/locale-1.adoc[]
+
+This is how it works:
+
+[source,clojure]
+----
+(require '[antizer.reagent :as ant])
+
+(defn render-app []
+  [ant/locale-provider {:locale (ant/locales "en_US")}
+    [content]])
+----
+
+include::common/locale-2.adoc[]
+
+To set the locale for Moment.js:
+
+[source,clojure]
+----
+(require '[cljsjs.moment.locale.es])
+
+(defn render-app []
+  [ant/locale-provider {:locale (ant/locales "es_ES")}
+    [ant/calendar {:default-value (js/moment)}]])
+----
+
+include::common/locale-3.adoc[]
+
+== Rum
+
+==== Components
+The Antizer components can be treated like any other Rum components. 
+This is how to make use of them:
+
+[source,clojure]
+----
+(require '[antizer.rum :as ant])
+
+(defn render-menu []
+  (ant/menu {:mode "inline" :theme "dark" :style {:height "100%" :width "20%"}
+             :on-click #(println "You have clicked" %1)}
+    (ant/menu-item {:key "item1"} "Menu Item 1")
+    (ant/menu-item {:key "item2"} "Menu Item 2")))
+----
+
+include::common/component-1.adoc[]
+
+In some cases, certain components (eg: `menu-sub-menu` and `tooltip`) can accept React.Elements as their properties. 
+In this case, simply send the hiccup form in:
+
+[source,clojure]
+----
+(require '[antizer.rum :as ant])
+
+(defn render-menu []
+  (ant/menu {:mode "inline" :theme "dark" :style {:height "100%" :width "20%"}}
+    ;; adds a sub-menu containing a "home" icon and "SubMenu 1" text
+    (ant/menu-sub-menu {:title [:span (ant/icon {:type "home"}) "SubMenu 1"]})))
+----
+
+==== Forms
+
+include::common/form-1.adoc[]
+
+[source,clojure]
+----
+(require '[antizer.rum :as ant])
+(require '[rum.core :as rum])
+
+(rum/defcs actual-form 
+  [state]
+  (let [my-form (ant/get-form state)]
+    (ant/form
+      (ant/form-item {:label "Name"}
+        (ant/decorate-field my-form "name"
+          (ant/input)))
+      (ant/form-item {:label "Password"}
+        (ant/decorate-field my-form "password" {:rules [{:required true}]}
+          (ant/input))))))
+
+(defn init-form []
+  (ant/create-form actual-form))
+
+(defn init! []
+  (rum/mount (init-form) (.-body js/document)))
+----
+
+include::common/form-2.adoc[]
+
+In the case of Rum, use `rum.core/defcs` to define a component that receives the `state` 
+parameter. Next, call `(antizer.rum/get-form)` with the `state` parameter to obtain the
+form object that will be used by the field decorator and form functions.
+
+include::common/form-3.adoc[]
+
+[source,clojure]
+----
+(require '[antizer.rum :as ant])
+(require '[rum.core :as rum])
+
+(rum/defcs actual-form 
+  [state]
+  (let [my-form (ant/get-form state)]
+    (ant/form
+      (ant/form-item {:label "Name"}
+        (ant/decorate-field my-form "name" {:rules [{:required true :min 10}]}
+          (ant/input)))
+      (ant/form-item
+        (ant/button {:on-click #(ant/validate-fields my-form)} "Submit")
+        (ant/button {:on-click #(ant/reset-fields my-form)} "Reset")))))
+
+(defn init-form []
+  (ant/create-form actual-form))
+
+(defn init! []
+  (rum/mount (init-form) (.-body js/document)))
+----
+
+include::common/form-4.adoc[]
+
+==== Localization / i18n
+
+===== Locale Provider
+
+include::common/locale-1.adoc[]
+
+This is how it works:
+
+[source,clojure]
+----
+(require '[antizer.rum :as ant])
+
+(defn render-app []
+  (ant/locale-provider {:locale (ant/locales "en_US")}
+    (content)))
+----
+
+include::common/locale-2.adoc[]
+
+To set the locale for Moment.js:
+
+[source,clojure]
+----
+(require '[cljsjs.moment.locale.es])
+(require '[antizer.rum :as ant])
+
+(defn render-app []
+  (ant/locale-provider {:locale (ant/locales "es_ES")}
+    (ant/calendar {:default-value (js/moment)})))
+----
+
+include::common/locale-3.adoc[]
+
+== Examples
+
+To compile the examples:
+
+[source,bash]
+----
+lein with-profile +examples cljsbuild once
+----
+
+To compile the examples and enable hot reloading with figwheel:
+
+[source,bash]
+----
+lein with-profile +examples-dev figwheel
+----
+
+After compilation, open up the respective HTML page in the `examples/resources` folder in your browser.
+
+
+== Troubleshooting
+
+1. The table or auto complete component is not displaying the data.
+
+include::common/data-props.adoc[tags=text]
+
+== External Resources
+
+Ant Design Components Documentation https://ant.design/docs/react/introduce
+
+Ant Design UI Guidelines https://ant.design/docs/spec/introduce
+
+== Acknowledgement
+
+Thanks to Ant Design, cljsjs/antd, Reagent, Rum and of course ClojureScript, without which this project would never exist.
+
+== License
+
+Copyright © 2017 Michael Lim
+
+Licensed under Eclipse Public License (see LICENSE).

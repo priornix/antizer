@@ -1,0 +1,19 @@
+===== Field decoration
+`(decorate-field)` is used to add automatic data capture and validation features
+to the child component. This function accepts the following parameters:
+
+[source,clojure]
+----
+(decorate-field form identifier [options] form-field)
+----
+
+It corresponds to the 
+https://ant.design/components/form/#this.props.form.getFieldDecorator(id,-options)[getFieldDecorator]
+function. For an explaination of the parameters, please refer to the API 
+documentation, the Ant Design 
+https://ant.design/components/form/#this.props.form.getFieldDecorator(id,-options)[Form page] and the example provided.
+
+===== Form functions
+After the form has been obtained via `(get-form)`, the form functions can be used. 
+
+An example of the usage of these functions is shown here:

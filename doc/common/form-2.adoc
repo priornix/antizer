@@ -1,0 +1,6 @@
+The initial step involves calling `(create-form)` with the form component 
+to be rendered. 
+
+Within the form component the `form` object should be obtained 
+via `(get-form)`, which obtains the `form` object from the React 
+component's property. This should be done only after the component has been constructed. 

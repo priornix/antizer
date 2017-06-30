@@ -1,0 +1,5 @@
+All the properties that are passed in can be in kebab-case. 
+
+include::data-props.adoc[tags=warning1;text;warning2]
+
+include::return-values.adoc[tags=note1;text;note2]

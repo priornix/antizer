@@ -1,0 +1,14 @@
+// tag::note1[]
+[NOTE]
+====
+// end::note1[]
+
+// tag::text[]
+All return values from the callback functions of the Ant Design components and the form functions 
+will be in the form of JavaScript objects. Please use `+++(js->clj)+++` to convert them before 
+any ClojureScript operations are to be performed on them.
+// end::text[]
+
+// tag::note2[]
+====
+// end::note2[]

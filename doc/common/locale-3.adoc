@@ -1,0 +1,4 @@
+Note that each locale to be used has to be included using `require` seperately.
+
+IMPORTANT: The default-value property must be set to a moment object, 
+otherwise the date locale will not be picked up by the component.

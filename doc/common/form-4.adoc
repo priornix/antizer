@@ -1,0 +1,4 @@
+The form functions (eg: `reset-fields`, `validate-fields`) correspond to the form functions which 
+can be found https://ant.design/components/form/#Form.create(options)[here].
+
+include::return-values.adoc[]
