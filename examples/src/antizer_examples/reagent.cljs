@@ -8,7 +8,7 @@
             [cljsjs.moment.locale.es]
             [cljsjs.moment.locale.de]
             [cljsjs.moment.locale.ja]
-            [cljsjs.moment.locale.ko]
+            [cljsjs.moment.locale.ru]
             [cljsjs.moment.locale.zh-cn]
             [reagent.core :as r]))
 
@@ -128,9 +128,9 @@
               [ant/select-option {:value "en_US"} "English"]
               [ant/select-option {:value "es_ES"} "Español"]
               [ant/select-option {:value "de_DE"} "Deutsch"]
+              [ant/select-option {:value "ru_RU"} "Русский"]
               [ant/select-option {:value "zh_CN"} "中文"]
               [ant/select-option {:value "ja_JP"} "日本語"]
-              [ant/select-option {:value "ko_KR"} "한국어"]
               [ant/select-option {:value "tlh" :disabled true} "Klingon"]]]
           [ant/pagination {:total 40 :show-size-changer true}] [:br]
           [ant/date-picker {:format "ddd MMM Do YYYY" :default-value (js/moment) :style {:width "60%"}}] [:br] [:br]

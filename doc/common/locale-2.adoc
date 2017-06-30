@@ -1,9 +1,9 @@
-It is recommended to place the locale provider at the top level of the application. 
+It is recommended to place the locale provider at the top level of the application.
 The whole list of supported locales can be found https://github.com/ant-design/ant-design/tree/master/components/locale-provider[here].
 
 To add a new language, please refer to https://ant.design/components/locale-provider/#Add-a-new-language[this].
 
 ===== Moment.js
 Some Ant Design components (eg: `calendar`, `date-picker`,
-`date-picker-range-picker`) uses the Moment.js to display 
-the dates in the correct language. 
+`date-picker-range-picker`) uses the Moment.js library to display
+the dates in the correct language.

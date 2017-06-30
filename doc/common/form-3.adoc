@@ -1,6 +1,6 @@
 ===== Field decoration
 `(decorate-field)` is used to add automatic data capture and validation features
-to the child component. This function accepts the following parameters:
+to each form field. This function accepts the following parameters:
 
 [source,clojure]
 ----
@@ -9,9 +9,11 @@ to the child component. This function accepts the following parameters:
 
 It corresponds to the 
 https://ant.design/components/form/#this.props.form.getFieldDecorator(id,-options)[getFieldDecorator]
-function. For an explaination of the parameters, please refer to the API 
-documentation, the Ant Design 
-https://ant.design/components/form/#this.props.form.getFieldDecorator(id,-options)[Form page] and the example provided.
+function. For an explaination of the parameters, please refer to the 
+https://priornix.github.io/antizer/latest/api/[API documentation], 
+the Ant Design 
+https://ant.design/components/form/#this.props.form.getFieldDecorator(id,-options)[Form page] 
+and the examples provided.
 
 ===== Form functions
 After the form has been obtained via `(get-form)`, the form functions can be used. 
