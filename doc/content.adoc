@@ -43,10 +43,10 @@ It is also necessary to add the Ant Design CSS stylesheet to your HTML page. You
 
 == Resources
 
-* Reagent Example https://priornix.github.io/antizer/latest/examples/reagent.html
-* Rum Example https://priornix.github.io/antizer/latest/examples/rum.html
+* https://priornix.github.io/antizer/latest/examples/reagent.html[Reagent Example]
+* https://priornix.github.io/antizer/latest/examples/rum.html[Rum Example]
 
-The API documentation can be found here: https://priornix.github.io/antizer/latest/api/
+* API documentation: https://priornix.github.io/antizer/latest/api/
 
 == Quick Example
 
@@ -97,7 +97,7 @@ The Ant design component, functions and property have been translated to kebab-c
 
 .Example of name mappings
 |===
-|Ant Design component or function name |Antizer Name
+|Ant Design component or function name |Antizer name
 
 |Calendar
 |calendar
@@ -119,7 +119,7 @@ The Ant design component, functions and property have been translated to kebab-c
 
 |===
 
-The full list of the Ant components and function names can be found here.
+The full list of the Ant Design component and function names can be found https://github.com/priornix/antizer/blob/master/src/antizer/antd.clj[here].
 
 === Types 
 
@@ -148,6 +148,9 @@ Example for rum:
 
 (ant/message-info "Hello World!")
 ----
+
+The full list of the Ant Design function names can be found https://github.com/priornix/antizer/blob/master/src/antizer/antd.clj#L82[here].
+
 ==== Components 
 
 These are the backbone of the entire library. Please refer to the Components section of the respective
@@ -195,6 +198,8 @@ In some cases, certain components (eg: `menu-sub-menu` and `tooltip`) can accept
                          (r/as-element
                            [:span [ant/icon {:type "home"}] "SubMenu 1"])}]])
 ----
+
+The full list of the Ant Design component names can be found https://github.com/priornix/antizer/blob/master/src/antizer/antd.clj[here].
 
 ==== Forms
 
@@ -329,6 +334,8 @@ In this case, simply send the hiccup form in:
     ;; adds a sub-menu containing a "home" icon and "SubMenu 1" text
     (ant/menu-sub-menu {:title [:span (ant/icon {:type "home"}) "SubMenu 1"]})))
 ----
+
+The full list of the Ant Design component names can be found https://github.com/priornix/antizer/blob/master/src/antizer/antd.clj[here].
 
 ==== Forms
 

@@ -10,8 +10,9 @@ Ant Design is an enterprise-class UI design language and React-based implementat
 
 ## Resources
 
-* Reagent Demo https://priornix.github.io/antizer/latest/examples/reagent.html
-* Rum Demo https://priornix.github.io/antizer/latest/examples/rum.html
+* [Reagent Demo](https://priornix.github.io/antizer/latest/examples/reagent.html)
+* [Rum Demo](https://priornix.github.io/antizer/latest/examples/rum.html)
+
 * Antizer Documentation https://priornix.github.io/antizer/latest/
 * API Documentation https://priornix.github.io/antizer/latest/api/
 
