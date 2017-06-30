@@ -76,15 +76,6 @@
             #(let [selected (js->clj %2 :keywordize-keys true)]
               (ant/message-info (str "You have selected: " (map :name selected))))}})]))
 
-(defn create-form3
-  "Calls Form.create() decorator with the form to be created.
-   Refer to: https://ant.design/components/form/#Form.create(options)"
-  [form & {:keys [options props] :or {options {} props {}}}]
-  (println "optons" options props)
-  (js/React.createElement
-    (((goog.object.getValueByKeys js/antd "Form" "create") (clj->js (antizer.core/map-keys->camel-case {}))
-      (:rum/class (meta form))))))
-
 (rum/defcs user-form < 
   {:init (fn [state props] 
            (merge state (js->clj props :keywordize-keys true)))}
@@ -151,7 +142,6 @@
 (defn messages []
   [:div.example-button
     [:h2 "Messages"]
-    (ant/button {:on-click #(println (:rum/class (meta user-form)))} "Normal")
     (ant/button {:on-click #(ant/message-info "Normal message")} "Normal")
     (ant/button {:on-click #(ant/message-success "Success message")} "Success")
     (ant/button {:on-click #(ant/message-warning "Warning message")} "Warning")

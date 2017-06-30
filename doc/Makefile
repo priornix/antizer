@@ -17,6 +17,6 @@ examples:
 	cd .. && rsync -av --progress examples/resources/ doc/dist/examples --exclude js/
 	lein with-profile +examples-dist cljsbuild once
 
-github: clean api doc examples
+github: doc examples
 	ghp-import -m "Generate documentation" -b gh-pages dist/
 	git push origin gh-pages

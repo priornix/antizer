@@ -29,7 +29,7 @@
 
 (defn define-form-funcs [method-name]
   (let [method-name (name method-name)]
-    `(defn ~(get-symbol-name method-name) "Testing one two" [form# & args#]
+    `(defn ~(get-symbol-name method-name) [form# & args#]
        (apply antizer.core/call-js-func ((keyword ~method-name) form#) args#))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 

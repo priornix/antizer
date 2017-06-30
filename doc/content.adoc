@@ -8,7 +8,7 @@ Michael Lim <priornix@gmail.com>
 
 == Introduction
 
-Ant Design is an enterprise-class UI design language and React-based implementation. It has the following features:
+https://ant.design/[Ant Design] is an enterprise-class UI design language and React-based implementation. It has the following features:
 
 * An enterprise-class UI design language for web applications.
 * A set of high-quality React components out of the box.

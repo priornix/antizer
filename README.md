@@ -1,6 +1,6 @@
 # antizer
 
-Antizer is a ClojureScript library implementing Ant Design React components for Reagent and Rum. 
+Antizer is a ClojureScript library implementing [Ant Design](https://ant.design/) React components for Reagent and Rum. 
 
 Ant Design is an enterprise-class UI design language and React-based implementation with the following features:
 

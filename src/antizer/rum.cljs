@@ -41,7 +41,7 @@
                JavaScript associative map"
   [form & {:keys [options props] :or {options {} props {}}}]
   (js/React.createElement
-    (((goog.object.getValueByKeys js/antd "Form" "create") (clj->js (antizer.core/map-keys->camel-case options)))
+    (((getValueByKeys js/antd "Form" "create") (clj->js (ant/map-keys->camel-case options)))
      (:rum/class (meta form))) (clj->js props)))
 
 (defn get-form
@@ -69,7 +69,7 @@
          params (clj->js (ant/map-keys->camel-case options))]
      ((field-decorator id params) field))))
 
-; (export-form-funcs)
-; (export-funcs)
-; (export-props)
-; (export-rum-components)
+(export-form-funcs)
+(export-funcs)
+(export-props)
+(export-rum-components)

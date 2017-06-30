@@ -14,7 +14,7 @@
                details"
    [form & {:keys [options] :or {options {}}}]
    (r/create-element
-     (((getValueByKeys js/ant "Form" "create") (clj->js (ant/map-keys->camel-case options)))
+     (((getValueByKeys js/antd "Form" "create") (clj->js (ant/map-keys->camel-case options)))
       (r/reactify-component form))))
 
 (defn get-form
@@ -43,7 +43,7 @@
          params (clj->js (ant/map-keys->camel-case options))]
      ((field-decorator id params) (r/as-element field)))))
 
-;(export-form-funcs)
-; (export-funcs)
-; (export-props)
-; (export-reagent-components)
+(export-form-funcs)
+(export-funcs)
+(export-props)
+(export-reagent-components)
