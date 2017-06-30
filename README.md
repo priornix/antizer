@@ -82,7 +82,7 @@ After compilation, open up the respective HTML page in the `examples/resources` 
 
 ## Acknowledgement
 
-Thanks to Ant Design, [cljsjs/antd](https://github.com/cljsjs/packages/tree/master/antd), [https://github.com/reagent-project/reagent](Reagent), [https://github.com/tonsky/rum](Rum) and of course [https://clojurescript.org](ClojureScript), without which this project would not be possible.
+Thanks to Ant Design, [cljsjs/antd](https://github.com/cljsjs/packages/tree/master/antd), [Reagent](https://github.com/reagent-project/reagent), [Rum](https://github.com/tonsky/rum) and of course [ClojureScript](https://clojurescript.org), without which this project would not be possible.
 
 ## License
 
