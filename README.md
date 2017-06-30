@@ -80,6 +80,10 @@ lein with-profile +examples-dev figwheel
 
 After compilation, open up the respective HTML page in the `examples/resources` folder in your browser.
 
+## Acknowledgement
+
+Thanks to Ant Design, [cljsjs/antd](https://github.com/cljsjs/packages/tree/master/antd), [https://github.com/reagent-project/reagent](Reagent), [https://github.com/tonsky/rum](Rum) and of course [https://clojurescript.org](ClojureScript), without which this project would not be possible.
+
 ## License
 
 Copyright © 2017 Michael Lim

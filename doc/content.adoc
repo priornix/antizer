@@ -463,7 +463,10 @@ Ant Design UI Guidelines https://ant.design/docs/spec/introduce
 
 == Acknowledgement
 
-Thanks to Ant Design, cljsjs/antd, Reagent, Rum and of course ClojureScript, without which this project would never exist.
+Thanks to Ant Design, https://github.com/cljsjs/packages/tree/master/antd[cljsjs/antd], 
+https://github.com/reagent-project/reagent[Reagent], 
+https://github.com/tonsky/rum[Rum] and of course https://clojurescript.org[ClojureScript], 
+without which this project would not be possible.
 
 == License
 
