@@ -23,7 +23,8 @@
        {:builds
          {:app
           {:compiler
-           {:output-to "doc/dist/latest/examples/js/app.js"}}}}}]
+           {:output-to "doc/dist/latest/examples/js/app.js"
+            :output-dir "doc/dist/latest/examples/js/out"}}}}}]
 
  :examples-dev
    [:examples

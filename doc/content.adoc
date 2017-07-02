@@ -22,7 +22,7 @@ To use antizer, just add the following to your `project.clj`:
 
 [source,clojure]
 ----
-[antizer "0.2.0"]
+[antizer "0.2.1"]
 ----
 
 You would also need to add the ClojureScript React library that you will be using.
@@ -39,14 +39,12 @@ For Rum:
 [rum "X.Y.Z"]
 ----
 
-It is also necessary to add the Ant Design CSS stylesheet to your HTML page. You can either include a precompiled version of the CSS via https://cdnjs.com/libraries/antd[CDN], or follow the instructions for customization with LESS https://ant.design/docs/react/customize-theme[here].
+It is also necessary to include the Ant Design CSS stylesheet in your HTML page. The CSS files can be obtained from the following classpaths:
 
-Note that both the version numbers of the CSS stylesheet and `cljsjs/antd` (ie: the Ant Design JavaScript library) being used should match to prevent any styling issues. Use this command to see the version of the `cljsjs/antd` library being depended upon within your project:
+* `cljsjs/development/antd.inc.css`
+* `cljsjs/production/antd.min.inc.css`
 
-[source,bash]
-----
-lein deps :tree
-----
+You can also follow the instructions for customization with LESS https://ant.design/docs/react/customize-theme[here].
 
 == Resources
 

@@ -26,6 +26,15 @@
                 (take 3 (iterate #(str % (string/reverse %)) x)))) 
           :placeholder "Enter something"})]))
 
+(defn avatar []
+  [:div.avatar
+    [:h2 "Avatar"]
+    [:div
+      (ant/avatar {:style {:background-color "#87d068"} :icon "user" :class "va-middle"})
+      (ant/avatar {:style {:color "#f56a00" :background-color "#fde3cf"} :class "va-middle"} "U")
+      (ant/avatar {:style {:background-color "#ffbf00"} :class "va-middle"} "John")
+      (ant/badge {:count 10} (ant/avatar {:style {:background-color "#108ee9"} :shape "square" :icon "user"}))]])
+
 (defn buttons []
   [:div.example-button
     [:h2 "Buttons"]
@@ -39,7 +48,7 @@
   [:div 
     [:h2 "Cards"]
     (ant/card {:title "Title" :bordered true :class "card"}
-      [:p "Not the usual lorem ipsum"])
+      [:p "Not the usual lorem ipsum"]) [:br]
     (ant/card {:bordered true :class "card-photo"} 
       [:div [:img {:src "https://unsplash.it/330/120/?random"}]]
       (ant/col {:span 12} [:div [:h3 "Please rate me"]])
@@ -134,7 +143,7 @@
             (ant/select-option {:value "ja_JP"} "日本語")
             (ant/select-option {:value "tlh" :disabled true} "Klingon"))]
         (ant/pagination {:total 40 :show-size-changer true}) [:br]
-        (ant/date-picker {:format "ddd MMM Do YYYY" :default-value (js/moment) :style {:width "60%"}}) [:br] [:br]
+        (ant/date-picker {:format "ddd MMM Do YYYY" :default-value (js/moment) :style {:width "60%"} :allow-clear false :show-today false}) [:br] [:br]
         (ant/time-picker {:style {:width "60%"}}) [:br] [:br]
         (ant/calendar {:fullscreen false :default-value (js/moment)})
         (ant/table {:columns common/columns})))))
@@ -262,7 +271,7 @@
   (ant/layout-content {:class "content-area"}
     (ant/row {:gutter 12}
      (render-example [carousel buttons messages timeline tree progress])
-     (render-example [card tooltip notifications auto-complete localization modal]))
+     (render-example [card tooltip notifications auto-complete localization modal avatar]))
     (render-full-row form-example)
     (render-full-row datatable)))
 
@@ -285,14 +294,13 @@
       (ant/affix
         (ant/layout-header {:class "banner"}
           (ant/row
-            (ant/col {:span 12} [:h2 {:key "layout"} "Antizer Rum Example"])
+            (ant/col {:span 12} [:h2.banner-header {:key "layout"} "Antizer Rum Example"])
             (ant/col {:span 1 :offset 11} 
               [:a {:href "https://github.com/priornix/antizer" :key "link"} 
                 (ant/icon {:class "banner-logo" :type "github"})]))))
       (ant/layout
-        (ant/layout-sider
-          (side-menu))
-        (content-area)))))
+        (ant/layout-sider (side-menu))
+        (ant/layout (content-area))))))
 
 (defn init! []
   (rum/mount (render-layout)

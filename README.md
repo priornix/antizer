@@ -16,12 +16,12 @@ Ant Design is an enterprise-class UI design language and React-based implementat
 * [Antizer Documentation](https://priornix.github.io/antizer/latest/)
 * [API Documentation](https://priornix.github.io/antizer/latest/api/)
 
-## Usage 
+## Usage
 
 To use Antizer, add the following to your project.clj:
 
 ```clojure
-[antizer "0.2.0"]
+[antizer "0.2.1"]
 ```
 
 You would also need to add the ClojureScript React library that you will be using.
@@ -36,13 +36,12 @@ For Rum:
 [rum "X.Y.Z"]
 ```
 
-It is also necessary to add the Ant Design CSS stylesheet to your HTML page. You can either include a precompiled version of the CSS via [CDN](https://cdnjs.com/libraries/antd), or follow the instructions for customization with LESS [here](https://ant.design/docs/react/customize-theme).
+It is also necessary to include the Ant Design CSS stylesheet in your HTML page. The CSS files can be obtained from the following classpaths:
 
-Note that both the version numbers of the CSS stylesheet and `cljsjs/antd` (ie: the Ant Design JavaScript library) being used should match to prevent any styling issues. Use this command to see the version of the `cljsjs/antd` library being depended upon within your project:
+* `cljsjs/development/antd.inc.css`
+* `cljsjs/production/antd.min.inc.css`
 
-```bash
-lein deps :tree
-```
+You can also follow the instructions for customization with LESS [here](https://ant.design/docs/react/customize-theme).
 
 ### Quick Example
 
@@ -85,6 +84,15 @@ lein with-profile +examples-dev figwheel
 ```
 
 After compilation, open up the respective HTML page in the `examples/resources` folder in your browser.
+
+## Changes
+
+### 0.2.1
+* Updated antd library to 2.11.2.
+* Updated instructions for CSS file inclusion.
+* Added Avatar component and example.
+* Fixed layout and CSS styles for examples.
+* Fixed cljsbuild settings for examples.
 
 ## Acknowledgement
 

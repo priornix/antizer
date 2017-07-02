@@ -5,6 +5,7 @@
                   Anchor
                   Anchor.Link
                   AutoComplete
+                  Avatar
                   BackTop
                   Badge
                   Breadcrumb
