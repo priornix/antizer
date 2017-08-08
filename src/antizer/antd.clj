@@ -9,6 +9,7 @@
                   BackTop
                   Badge
                   Breadcrumb
+                  Breadcrumb.Item
                   Button
                   Button.Group
                   Calendar
@@ -31,6 +32,7 @@
                   Input
                   Input.Group
                   Input.Search
+                  Input.TextArea
                   InputNumber
                   Layout
                   Layout.Content

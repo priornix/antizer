@@ -301,7 +301,8 @@
                     [ant/icon {:class "banner-logo" :type "github"}]]]])]]
         [ant/layout
           [ant/layout-sider [side-menu]]
-          [ant/layout [content-area]]]]]))
+          [ant/layout {:style {:width "60%"}} 
+            [content-area]]]]]))
 
 (defn init! []
   (r/render [render-layout]

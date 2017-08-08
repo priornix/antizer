@@ -16,13 +16,17 @@ https://ant.design/[Ant Design] is an enterprise-class UI design language and Re
 
 Antizer is a ClojureScript library for Ant Design React components with bindings for Reagent and Rum. 
 
+== Status
+
+All the Ant Design components should be fully functional and production-ready. If you discover any missing or invalid components, please file a ticket.
+
 == Install
 
 To use antizer, just add the following to your `project.clj`:
 
 [source,clojure]
 ----
-[antizer "0.2.1"]
+[antizer "0.2.2"]
 ----
 
 You would also need to add the ClojureScript React library that you will be using.
@@ -41,8 +45,8 @@ For Rum:
 
 It is also necessary to include the Ant Design CSS stylesheet in your HTML page. The CSS files can be obtained from the following classpaths:
 
-* `cljsjs/development/antd.inc.css`
-* `cljsjs/production/antd.min.inc.css`
+* `cljsjs/antd/development/antd.inc.css`
+* `cljsjs/antd/production/antd.min.inc.css`
 
 You can also follow the instructions for customization with LESS https://ant.design/docs/react/customize-theme[here].
 
@@ -50,8 +54,9 @@ You can also follow the instructions for customization with LESS https://ant.des
 
 * https://priornix.github.io/antizer/latest/examples/reagent.html[Reagent Example]
 * https://priornix.github.io/antizer/latest/examples/rum.html[Rum Example]
-
 * https://priornix.github.io/antizer/latest/api/[API documentation]
+* https://ant.design/docs/react/introduce[Ant Design Components Documentation]
+* https://ant.design/docs/spec/introduce[Ant Design UI Guidelines]
 
 == Quick Example
 
@@ -456,15 +461,13 @@ After compilation, open up the respective HTML page in the `examples/resources` 
 
 == Troubleshooting
 
-1. The table or auto complete component is not displaying the data.
+* The table or auto complete component is not displaying the data.
 
 include::common/data-props.adoc[tags=text]
 
-== External Resources
+* The text within the DatePicker and Calendar components are displayed in an incorrect language.
 
-Ant Design Components Documentation https://ant.design/docs/react/introduce
-
-Ant Design UI Guidelines https://ant.design/docs/spec/introduce
+Please refer to this known issue and workaround https://github.com/priornix/antizer#known-issues[here].
 
 == Acknowledgement
 

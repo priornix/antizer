@@ -9,11 +9,9 @@ clean:
 	rm -rf dist
 
 doc:
-	mkdir -p dist/doc/
 	asciidoctor -o dist/latest/index.html content.adoc
 
 examples:
-	mkdir -p dist/doc/examples/
 	cd .. && rsync -av --progress examples/resources/ doc/dist/latest/examples --exclude js/
 	lein with-profile +examples-dist cljsbuild once
 

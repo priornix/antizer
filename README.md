@@ -1,6 +1,6 @@
 # antizer
 
-Antizer is a ClojureScript library implementing [Ant Design](https://ant.design/) React components for Reagent and Rum. 
+Antizer is a ClojureScript library implementing [Ant Design](https://ant.design/) React components for [Reagent](https://github.com/reagent-project/reagent) and [Rum](https://github.com/tonsky/rum). 
 
 Ant Design is an enterprise-class UI design language and React-based implementation with the following features:
 
@@ -11,17 +11,29 @@ Ant Design is an enterprise-class UI design language and React-based implementat
 ## Resources
 
 * [Reagent Demo](https://priornix.github.io/antizer/latest/examples/reagent.html)
+
 * [Rum Demo](https://priornix.github.io/antizer/latest/examples/rum.html)
 
 * [Antizer Documentation](https://priornix.github.io/antizer/latest/)
+
 * [API Documentation](https://priornix.github.io/antizer/latest/api/)
+
+* [Ant Design Component Documentation](https://ant.design/docs/react/introduce)
+
+## Status
+
+All the Ant Design components should be fully functional and production-ready. If you discover any missing or invalid components, please file a ticket.
+
+### Who's Using Antizer
+
+Please let me know if you are using Antizer within your project, and I will gladly add that in here.
 
 ## Usage
 
 To use Antizer, add the following to your project.clj:
 
 ```clojure
-[antizer "0.2.1"]
+[antizer "0.2.2"]
 ```
 
 You would also need to add the ClojureScript React library that you will be using.
@@ -38,8 +50,8 @@ For Rum:
 
 It is also necessary to include the Ant Design CSS stylesheet in your HTML page. The CSS files can be obtained from the following classpaths:
 
-* `cljsjs/development/antd.inc.css`
-* `cljsjs/production/antd.min.inc.css`
+* `cljsjs/antd/development/antd.inc.css`
+* `cljsjs/antd/production/antd.min.inc.css`
 
 You can also follow the instructions for customization with LESS [here](https://ant.design/docs/react/customize-theme).
 
@@ -87,12 +99,31 @@ After compilation, open up the respective HTML page in the `examples/resources` 
 
 ## Changes
 
+### 0.2.2
+* Updated antd library to [2.12.3](https://ant.design/changelog#2.12.3).
+* Fixed resource typo in README.md and documentation.
+* Added missing components: Breadcumb.Item.
+* Added new component: Input.TextArea.
+* Fixed layout issue in examples.
+* Added note on DatePicker and Calendar known issues.
+
 ### 0.2.1
-* Updated antd library to 2.11.2.
+* Updated antd library to [2.11.2](https://ant.design/changelog#2.11.2).
 * Updated instructions for CSS file inclusion.
 * Added Avatar component and example.
 * Fixed layout and CSS styles for examples.
 * Fixed cljsbuild settings for examples.
+
+## Known Issues
+
+#### DatePicker and Calendar date text are not displayed in the correct language when no date value has been set.
+
+This is due to how the moment.js library is being packaged [currently](https://github.com/ant-design/ant-design/issues/4972#issuecomment-281235293). The date values must always be present for the components in order for the date to be displayed correctly. A bug report has been filed with the `antd` library [here](https://github.com/ant-design/ant-design/issues/6712). 
+
+Here is a workaround for now:
+
+* Set default-value to a moment object ie: `:default-value (js/moment)` when using the DatePicker or Calendar component.
+* Disable the clear date feature by setting `:allow-clear` to `false`.
 
 ## Acknowledgement
 
