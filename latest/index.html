@@ -502,6 +502,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_introduction">Introduction</a></li>
+<li><a href="#_status">Status</a></li>
 <li><a href="#_install">Install</a></li>
 <li><a href="#_resources">Resources</a></li>
 <li><a href="#_quick_example">Quick Example</a></li>
@@ -534,7 +535,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_examples">Examples</a></li>
 <li><a href="#_troubleshooting">Troubleshooting</a></li>
-<li><a href="#_external_resources">External Resources</a></li>
 <li><a href="#_acknowledgement">Acknowledgement</a></li>
 <li><a href="#_license">License</a></li>
 </ul>
@@ -566,6 +566,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
+<h2 id="_status">Status</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All the Ant Design components should be fully functional and production-ready. If you discover any missing or invalid components, please file a ticket.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_install">Install</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -573,7 +581,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="clojure"><span class="tok-p">[</span><span class="tok-nv">antizer</span> <span class="tok-s">&quot;0.2.1&quot;</span><span class="tok-p">]</span></code></pre>
+<pre class="pygments highlight"><code data-lang="clojure"><span class="tok-p">[</span><span class="tok-nv">antizer</span> <span class="tok-s">&quot;0.2.2&quot;</span><span class="tok-p">]</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -601,10 +609,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p><code>cljsjs/development/antd.inc.css</code></p>
+<p><code>cljsjs/antd/development/antd.inc.css</code></p>
 </li>
 <li>
-<p><code>cljsjs/production/antd.min.inc.css</code></p>
+<p><code>cljsjs/antd/production/antd.min.inc.css</code></p>
 </li>
 </ul>
 </div>
@@ -626,6 +634,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li>
 <p><a href="https://priornix.github.io/antizer/latest/api/">API documentation</a></p>
+</li>
+<li>
+<p><a href="https://ant.design/docs/react/introduce">Ant Design Components Documentation</a></p>
+</li>
+<li>
+<p><a href="https://ant.design/docs/spec/introduce">Ant Design UI Guidelines</a></p>
 </li>
 </ul>
 </div>
@@ -1104,8 +1118,7 @@ the dates in the correct language.</p>
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-The default-value property must be set to a moment object,
-otherwise the date locale will not be picked up by the component.
+Due to how the moment.js library is being integrated with Ant Design, the DatePicker and Calendar components must be initialized in a certain way for the text to be displayed in the correct language. Please refer to <a href="https://github.com/priornix/antizer#known-issues">this</a> for the workaround.
 </td>
 </tr>
 </table>
@@ -1364,8 +1377,7 @@ the dates in the correct language.</p>
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-The default-value property must be set to a moment object,
-otherwise the date locale will not be picked up by the component.
+Due to how the moment.js library is being integrated with Ant Design, the DatePicker and Calendar components must be initialized in a certain way for the text to be displayed in the correct language. Please refer to <a href="https://github.com/priornix/antizer#known-issues">this</a> for the workaround.
 </td>
 </tr>
 </table>
@@ -1401,26 +1413,25 @@ otherwise the date locale will not be picked up by the component.
 <div class="sect1">
 <h2 id="_troubleshooting">Troubleshooting</h2>
 <div class="sectionbody">
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
 <p>The table or auto complete component is not displaying the data.</p>
 </li>
-</ol>
+</ul>
 </div>
 <div class="paragraph">
 <p>Any properties that begins with <code>data</code> has to be in camel case instead of kebab case, as they will be treated as html attributes. Thus, <strong>DO NOT</strong> use <code>data-index</code> and <code>data-source</code> as they would not work, use <code>dataIndex</code> and <code>dataSource</code> instead.</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>The text within the DatePicker and Calendar components are displayed in an incorrect language.</p>
+</li>
+</ul>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_external_resources">External Resources</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Ant Design Components Documentation <a href="https://ant.design/docs/react/introduce" class="bare">https://ant.design/docs/react/introduce</a></p>
-</div>
-<div class="paragraph">
-<p>Ant Design UI Guidelines <a href="https://ant.design/docs/spec/introduce" class="bare">https://ant.design/docs/spec/introduce</a></p>
+<p>Please refer to this known issue and workaround <a href="https://github.com/priornix/antizer#known-issues">here</a>.</p>
 </div>
 </div>
 </div>
@@ -1447,7 +1458,7 @@ otherwise the date locale will not be picked up by the component.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-07-02 19:54:40 SGT
+Last updated 2017-08-08 17:19:01 SGT
 </div>
 </div>
 </body>

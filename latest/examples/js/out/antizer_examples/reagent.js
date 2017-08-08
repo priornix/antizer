@@ -11,13 +11,13 @@ return ((function (data){
 return (function (){
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h2,[cljs.core.str("Autocomplete")].join('')], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.auto_complete,new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$style,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$width,"80%"], null),cljs.core.cst$kw$dataSource,(cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(data) : cljs.core.deref.call(null,data)),cljs.core.cst$kw$on_DASH_search,((function (data){
 return (function (x){
-var G__15261 = data;
-var G__15262 = cljs.core.take.cljs$core$IFn$_invoke$arity$2((3),cljs.core.iterate(((function (G__15261,data){
-return (function (p1__15258_SHARP_){
-return [cljs.core.str(p1__15258_SHARP_),cljs.core.str(clojure.string.reverse(p1__15258_SHARP_))].join('');
-});})(G__15261,data))
+var G__15269 = data;
+var G__15270 = cljs.core.take.cljs$core$IFn$_invoke$arity$2((3),cljs.core.iterate(((function (G__15269,data){
+return (function (p1__15266_SHARP_){
+return [cljs.core.str(p1__15266_SHARP_),cljs.core.str(clojure.string.reverse(p1__15266_SHARP_))].join('');
+});})(G__15269,data))
 ,x));
-return (cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__15261,G__15262) : cljs.core.reset_BANG_.call(null,G__15261,G__15262));
+return (cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__15269,G__15270) : cljs.core.reset_BANG_.call(null,G__15269,G__15270));
 });})(data))
 ,cljs.core.cst$kw$placeholder,"Enter something"], null)], null)], null);
 });
@@ -33,25 +33,25 @@ antizer_examples.reagent.card = (function antizer_examples$reagent$card(){
 return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h2,"Cards"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.card,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$title,"Title",cljs.core.cst$kw$bordered,true,cljs.core.cst$kw$class,"card"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$p,"Not the usual lorem ipsum"], null)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$br], null),new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.card,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$bordered,true,cljs.core.cst$kw$class,"card-photo"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$img,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$src,"https://unsplash.it/330/120/?random"], null)], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.col,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$span,(12)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h3,"Please rate me"], null)], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.col,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$span,(12)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.rate], null)], null)], null)], null);
 });
 antizer_examples.reagent.carousel = (function antizer_examples$reagent$carousel(){
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h2,"Carousel"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.carousel,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$autoplay,true,cljs.core.cst$kw$dots,true], null),(function (){var iter__7189__auto__ = (function antizer_examples$reagent$carousel_$_iter__15269(s__15270){
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h2,"Carousel"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.carousel,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$autoplay,true,cljs.core.cst$kw$dots,true], null),(function (){var iter__7189__auto__ = (function antizer_examples$reagent$carousel_$_iter__15277(s__15278){
 return (new cljs.core.LazySeq(null,(function (){
-var s__15270__$1 = s__15270;
+var s__15278__$1 = s__15278;
 while(true){
-var temp__4657__auto__ = cljs.core.seq(s__15270__$1);
+var temp__4657__auto__ = cljs.core.seq(s__15278__$1);
 if(temp__4657__auto__){
-var s__15270__$2 = temp__4657__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__15270__$2)){
-var c__7187__auto__ = cljs.core.chunk_first(s__15270__$2);
+var s__15278__$2 = temp__4657__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__15278__$2)){
+var c__7187__auto__ = cljs.core.chunk_first(s__15278__$2);
 var size__7188__auto__ = cljs.core.count(c__7187__auto__);
-var b__15272 = cljs.core.chunk_buffer(size__7188__auto__);
-if((function (){var i__15271 = (0);
+var b__15280 = cljs.core.chunk_buffer(size__7188__auto__);
+if((function (){var i__15279 = (0);
 while(true){
-if((i__15271 < size__7188__auto__)){
-var i = cljs.core._nth.cljs$core$IFn$_invoke$arity$2(c__7187__auto__,i__15271);
-cljs.core.chunk_append(b__15272,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,i], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$img,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$src,[cljs.core.str("https://unsplash.it/400/300/?random="),cljs.core.str(i)].join('')], null)], null)], null));
+if((i__15279 < size__7188__auto__)){
+var i = cljs.core._nth.cljs$core$IFn$_invoke$arity$2(c__7187__auto__,i__15279);
+cljs.core.chunk_append(b__15280,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,i], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$img,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$src,[cljs.core.str("https://unsplash.it/400/300/?random="),cljs.core.str(i)].join('')], null)], null)], null));
 
-var G__15275 = (i__15271 + (1));
-i__15271 = G__15275;
+var G__15283 = (i__15279 + (1));
+i__15279 = G__15283;
 continue;
 } else {
 return true;
@@ -59,13 +59,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__15272),antizer_examples$reagent$carousel_$_iter__15269(cljs.core.chunk_rest(s__15270__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__15280),antizer_examples$reagent$carousel_$_iter__15277(cljs.core.chunk_rest(s__15278__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__15272),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__15280),null);
 }
 } else {
-var i = cljs.core.first(s__15270__$2);
-return cljs.core.cons(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,i], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$img,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$src,[cljs.core.str("https://unsplash.it/400/300/?random="),cljs.core.str(i)].join('')], null)], null)], null),antizer_examples$reagent$carousel_$_iter__15269(cljs.core.rest(s__15270__$2)));
+var i = cljs.core.first(s__15278__$2);
+return cljs.core.cons(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,i], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$img,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$src,[cljs.core.str("https://unsplash.it/400/300/?random="),cljs.core.str(i)].join('')], null)], null)], null),antizer_examples$reagent$carousel_$_iter__15277(cljs.core.rest(s__15278__$2)));
 }
 } else {
 return null;
@@ -78,15 +78,15 @@ return iter__7189__auto__(cljs.core.range.cljs$core$IFn$_invoke$arity$1((3)));
 })()], null)], null);
 });
 antizer_examples.reagent.add_actions_column = (function antizer_examples$reagent$add_actions_column(columns,data_atom){
-return cljs.core.conj.cljs$core$IFn$_invoke$arity$2(columns,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$title,"Actions",cljs.core.cst$kw$render,(function (p1__15277_SHARP_,p2__15276_SHARP_){
+return cljs.core.conj.cljs$core$IFn$_invoke$arity$2(columns,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$title,"Actions",cljs.core.cst$kw$render,(function (p1__15285_SHARP_,p2__15284_SHARP_){
 return reagent.core.as_element(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.button,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$icon,"delete",cljs.core.cst$kw$type,"danger",cljs.core.cst$kw$on_DASH_click,(function (){
-var G__15280 = data_atom;
-var G__15281 = cljs.core.remove.cljs$core$IFn$_invoke$arity$2(((function (G__15280){
+var G__15288 = data_atom;
+var G__15289 = cljs.core.remove.cljs$core$IFn$_invoke$arity$2(((function (G__15288){
 return (function (d){
-return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.get.cljs$core$IFn$_invoke$arity$2(cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$1(p2__15276_SHARP_),"id"),cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(d));
-});})(G__15280))
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.get.cljs$core$IFn$_invoke$arity$2(cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$1(p2__15284_SHARP_),"id"),cljs.core.cst$kw$id.cljs$core$IFn$_invoke$arity$1(d));
+});})(G__15288))
 ,(cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(data_atom) : cljs.core.deref.call(null,data_atom)));
-return (cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__15280,G__15281) : cljs.core.reset_BANG_.call(null,G__15280,G__15281));
+return (cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__15288,G__15289) : cljs.core.reset_BANG_.call(null,G__15288,G__15289));
 })], null)], null));
 })], null));
 });
@@ -95,8 +95,8 @@ var data = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(antizer_examples.comm
 return ((function (data){
 return (function (){
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h2,"Data Table"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.table,new cljs.core.PersistentArrayMap(null, 5, [cljs.core.cst$kw$columns,antizer_examples.reagent.add_actions_column(antizer_examples.common.columns,data),cljs.core.cst$kw$dataSource,(cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(data) : cljs.core.deref.call(null,data)),cljs.core.cst$kw$pagination,antizer_examples.common.pagination,cljs.core.cst$kw$row_DASH_key,"id",cljs.core.cst$kw$row_DASH_selection,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$on_DASH_change,((function (data){
-return (function (p1__15283_SHARP_,p2__15282_SHARP_){
-var selected = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(p2__15282_SHARP_,cljs.core.array_seq([cljs.core.cst$kw$keywordize_DASH_keys,true], 0));
+return (function (p1__15291_SHARP_,p2__15290_SHARP_){
+var selected = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(p2__15290_SHARP_,cljs.core.array_seq([cljs.core.cst$kw$keywordize_DASH_keys,true], 0));
 return antizer.reagent.message_info.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([[cljs.core.str("You have selected: "),cljs.core.str(cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.cst$kw$name,selected))].join('')], 0));
 });})(data))
 ], null)], null)], null)], null);
@@ -125,8 +125,8 @@ var locale_atom = reagent.core.atom.cljs$core$IFn$_invoke$arity$1("en_US");
 return ((function (locale_atom){
 return (function (){
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.locale_provider,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$locale,antizer.reagent.locales((cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(locale_atom) : cljs.core.deref.call(null,locale_atom)))], null),new cljs.core.PersistentVector(null, 13, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h2,"Localization"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$span,"Choose a language:",new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.select,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$default_DASH_value,"en_US",cljs.core.cst$kw$on_DASH_change,((function (locale_atom){
-return (function (p1__15284_SHARP_){
-return antizer_examples.common.set_locale(p1__15284_SHARP_,locale_atom);
+return (function (p1__15292_SHARP_){
+return antizer_examples.common.set_locale(p1__15292_SHARP_,locale_atom);
 });})(locale_atom))
 ,cljs.core.cst$kw$style,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$padding,"10px"], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.select_option,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$value,"en_US"], null),"English"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.select_option,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$value,"es_ES"], null),"Espa\u00F1ol"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.select_option,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$value,"de_DE"], null),"Deutsch"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.select_option,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$value,"ru_RU"], null),"\u0420\u0443\u0441\u0441\u043A\u0438\u0439"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.select_option,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$value,"zh_CN"], null),"\u4E2D\u6587"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.select_option,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$value,"ja_JP"], null),"\u65E5\u672C\u8A9E"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.select_option,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$value,"tlh",cljs.core.cst$kw$disabled,true], null),"Klingon"], null)], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.pagination,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$total,(40),cljs.core.cst$kw$show_DASH_size_DASH_changer,true], null)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$br], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.date_picker,new cljs.core.PersistentArrayMap(null, 5, [cljs.core.cst$kw$format,"ddd MMM Do YYYY",cljs.core.cst$kw$default_DASH_value,moment(),cljs.core.cst$kw$style,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$width,"60%"], null),cljs.core.cst$kw$allow_DASH_clear,false,cljs.core.cst$kw$show_DASH_today,false], null)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$br], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$br], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.time_picker,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$width,"60%"], null)], null)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$br], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$br], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.calendar,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$fullscreen,false,cljs.core.cst$kw$default_DASH_value,moment()], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.table,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$columns,antizer_examples.common.columns], null)], null)], null)], null);
 });
@@ -246,25 +246,25 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
  * Render each example within a bordered box
  */
 antizer_examples.reagent.render_example = (function antizer_examples$reagent$render_example(examples){
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.col,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$span,(12)], null),(function (){var iter__7189__auto__ = (function antizer_examples$reagent$render_example_$_iter__15291(s__15292){
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.col,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$span,(12)], null),(function (){var iter__7189__auto__ = (function antizer_examples$reagent$render_example_$_iter__15299(s__15300){
 return (new cljs.core.LazySeq(null,(function (){
-var s__15292__$1 = s__15292;
+var s__15300__$1 = s__15300;
 while(true){
-var temp__4657__auto__ = cljs.core.seq(s__15292__$1);
+var temp__4657__auto__ = cljs.core.seq(s__15300__$1);
 if(temp__4657__auto__){
-var s__15292__$2 = temp__4657__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__15292__$2)){
-var c__7187__auto__ = cljs.core.chunk_first(s__15292__$2);
+var s__15300__$2 = temp__4657__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__15300__$2)){
+var c__7187__auto__ = cljs.core.chunk_first(s__15300__$2);
 var size__7188__auto__ = cljs.core.count(c__7187__auto__);
-var b__15294 = cljs.core.chunk_buffer(size__7188__auto__);
-if((function (){var i__15293 = (0);
+var b__15302 = cljs.core.chunk_buffer(size__7188__auto__);
+if((function (){var i__15301 = (0);
 while(true){
-if((i__15293 < size__7188__auto__)){
-var example = cljs.core._nth.cljs$core$IFn$_invoke$arity$2(c__7187__auto__,i__15293);
-cljs.core.chunk_append(b__15294,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$box,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,cljs.core.random_uuid()], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$box_DASH_content,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [example], null)], null)], null));
+if((i__15301 < size__7188__auto__)){
+var example = cljs.core._nth.cljs$core$IFn$_invoke$arity$2(c__7187__auto__,i__15301);
+cljs.core.chunk_append(b__15302,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$box,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,cljs.core.random_uuid()], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$box_DASH_content,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [example], null)], null)], null));
 
-var G__15297 = (i__15293 + (1));
-i__15293 = G__15297;
+var G__15305 = (i__15301 + (1));
+i__15301 = G__15305;
 continue;
 } else {
 return true;
@@ -272,13 +272,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__15294),antizer_examples$reagent$render_example_$_iter__15291(cljs.core.chunk_rest(s__15292__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__15302),antizer_examples$reagent$render_example_$_iter__15299(cljs.core.chunk_rest(s__15300__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__15294),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__15302),null);
 }
 } else {
-var example = cljs.core.first(s__15292__$2);
-return cljs.core.cons(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$box,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,cljs.core.random_uuid()], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$box_DASH_content,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [example], null)], null)], null),antizer_examples$reagent$render_example_$_iter__15291(cljs.core.rest(s__15292__$2)));
+var example = cljs.core.first(s__15300__$2);
+return cljs.core.cons(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$box,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$key,cljs.core.random_uuid()], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$box_DASH_content,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [example], null)], null)], null),antizer_examples$reagent$render_example_$_iter__15299(cljs.core.rest(s__15300__$2)));
 }
 } else {
 return null;
@@ -301,7 +301,7 @@ return new cljs.core.PersistentVector(null, 8, 5, cljs.core.PersistentVector.EMP
 });
 antizer_examples.reagent.render_layout = (function antizer_examples$reagent$render_layout(){
 return (function (){
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.locale_provider,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$locale,antizer.reagent.locales("en_US")], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.layout,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.affix,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.layout_header,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$class,"banner"], null),reagent.core.as_element(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.row,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.col,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$span,(12)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h2$banner_DASH_header,"Antizer Reagent Example"], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.col,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$span,(1),cljs.core.cst$kw$offset,(11)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$a,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$href,"https://github.com/priornix/antizer"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.icon,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$class,"banner-logo",cljs.core.cst$kw$type,"github"], null)], null)], null)], null)], null))], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.layout,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.layout_sider,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer_examples.reagent.side_menu], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.layout,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer_examples.reagent.content_area], null)], null)], null)], null)], null);
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.locale_provider,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$locale,antizer.reagent.locales("en_US")], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.layout,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.affix,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.layout_header,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$class,"banner"], null),reagent.core.as_element(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.row,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.col,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$span,(12)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$h2$banner_DASH_header,"Antizer Reagent Example"], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.col,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$span,(1),cljs.core.cst$kw$offset,(11)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$a,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$href,"https://github.com/priornix/antizer"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.icon,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$class,"banner-logo",cljs.core.cst$kw$type,"github"], null)], null)], null)], null)], null))], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.layout,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.layout_sider,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer_examples.reagent.side_menu], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer.reagent.layout,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$style,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$width,"60%"], null)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [antizer_examples.reagent.content_area], null)], null)], null)], null)], null);
 });
 });
 antizer_examples.reagent.init_BANG_ = (function antizer_examples$reagent$init_BANG_(){

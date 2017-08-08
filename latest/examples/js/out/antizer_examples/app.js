@@ -4,8 +4,8 @@ goog.require('cljs.core');
 goog.require('antizer_examples.reagent');
 goog.require('antizer_examples.rum');
 antizer_examples.app.init_BANG_ = (function antizer_examples$app$init_BANG_(){
-var G__15370 = example;
-switch (G__15370) {
+var G__15378 = example;
+switch (G__15378) {
 case "reagent":
 return antizer_examples.reagent.init_BANG_();
 
