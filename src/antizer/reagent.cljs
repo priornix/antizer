@@ -11,11 +11,13 @@
 
     :options - map of Form.create() options. Refer to: 
                https://ant.design/components/form/#Form.create(options) for
-               details"
-   [form & {:keys [options] :or {options {}}}]
-   (r/create-element
-     (((getValueByKeys js/antd "Form" "create") (clj->js (ant/map-keys->camel-case options)))
-      (r/reactify-component form))))
+               details
+    :props - map of props to be provided to the form component"
+  [form & {:keys [options props] :or {options {} props {}}}]
+  (r/create-element
+    (((getValueByKeys js/antd "Form" "create") (clj->js (ant/map-keys->camel-case options)))
+      (r/reactify-component form))
+    (clj->js props)))
 
 (defn get-form
   "Returns the `form` created by Form.create(). This function must be called
