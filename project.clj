@@ -1,4 +1,4 @@
-(defproject org.clojars.elvn/antizer "1.0.0-SNAPSHOT"
+(defproject antizer "0.2.2"
   :description "Antizer"
   :url "https://github.com/elvn/antizer"
   :license {:name "Eclipse Public License"
