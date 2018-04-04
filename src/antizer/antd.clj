@@ -5,6 +5,8 @@
                   Anchor
                   Anchor.Link
                   AutoComplete
+                  AutoComplete.OptGroup
+                  AutoComplete.Option
                   Avatar
                   BackTop
                   Badge
@@ -14,6 +16,8 @@
                   Button.Group
                   Calendar
                   Card
+                  Card.Grid
+                  Card.Meta
                   Carousel
                   Cascader
                   Checkbox
@@ -24,6 +28,8 @@
                   DatePicker
                   DatePicker.MonthPicker
                   DatePicker.RangePicker
+                  DatePicker.WeekPicker
+                  Divider
                   Dropdown
                   Dropdown.Button
                   Form
@@ -39,8 +45,12 @@
                   Layout.Footer
                   Layout.Header
                   Layout.Sider
+                  List
+                  List.Item
+                  List.Item.Meta
                   LocaleProvider
                   Mention
+                  Mention.Nav
                   Menu
                   Menu.Divider
                   Menu.Item
@@ -52,12 +62,13 @@
                   Popover
                   Progress
                   Radio
+                  Radio.Button
                   Radio.Group
                   Rate
                   Row
                   Select
-                  Select.Option
                   Select.OptGroup
+                  Select.Option
                   Slider
                   Spin
                   Steps
@@ -65,6 +76,7 @@
                   Switch
                   Table
                   Table.Column
+                  Table.ColumnGroup
                   Tabs
                   Tabs.TabPane
                   Tag
@@ -83,17 +95,17 @@
 (def props '[locales])
 
 (def funcs '[message.config
+             message.destroy
              message.error
              message.info
              message.loading
              message.success
              message.warn
-             message.warning
              Modal.confirm
              Modal.error
              Modal.info
              Modal.success
-             Modal.warning
+             Modal.warn
              notification.close
              notification.config
              notification.destroy
@@ -101,16 +113,15 @@
              notification.info
              notification.open
              notification.success
-             notification.warn
-             notification.warning])
+             notification.warn])
 
 (def form-funcs '[getFieldDecorator
                   getFieldError
                   getFieldsError
-                  getFieldValue
                   getFieldsValue
-                  isFieldTouched
+                  getFieldValue
                   isFieldsTouched
+                  isFieldTouched
                   isFieldValidating
                   resetFields
                   setFields
