@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [org.clojure/clojurescript "1.9.946"]
-                 [cljsjs/antd "3.2.0-0"]
+                 [cljsjs/antd "3.3.0-0"]
                  [cljsjs/moment "2.17.1-1"]]
   :plugins [[lein-codox "0.10.3"]]
   :codox {:language :clojurescript
