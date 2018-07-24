@@ -1,6 +1,6 @@
 # antizer
 
-Antizer is a ClojureScript library implementing [Ant Design](https://ant.design/) React components for [Reagent](https://github.com/reagent-project/reagent) and [Rum](https://github.com/tonsky/rum). 
+Antizer is a ClojureScript library implementing [Ant Design](https://ant.design/) React components for [Reagent](https://github.com/reagent-project/reagent) and [Rum](https://github.com/tonsky/rum).
 
 Ant Design is an enterprise-class UI design language and React-based implementation with the following features:
 
@@ -33,7 +33,7 @@ Please let me know if you are using Antizer within your project, and I will glad
 To use Antizer, add the following to your project.clj:
 
 ```clojure
-[antizer "0.2.2"]
+[kittenll/antizer "0.5.0"]
 ```
 
 You would also need to add the ClojureScript React library that you will be using.
@@ -99,6 +99,10 @@ After compilation, open up the respective HTML page in the `examples/resources` 
 
 ## Changes
 
+### 0.5.0
+* Upgrade cljs to 1.10.238
+* Upgrade antd to 3.7.1-0
+
 ### 0.2.2
 * Updated antd library to [2.12.3](https://ant.design/changelog#2.12.3).
 * Fixed resource typo in README.md and documentation.
@@ -118,7 +122,7 @@ After compilation, open up the respective HTML page in the `examples/resources` 
 
 #### DatePicker and Calendar date text are not displayed in the correct language when no date value has been set.
 
-This is due to how the moment.js library is being packaged [currently](https://github.com/ant-design/ant-design/issues/4972#issuecomment-281235293). The date values must always be present for the components in order for the date to be displayed correctly. A bug report has been filed with the `antd` library [here](https://github.com/ant-design/ant-design/issues/6712). 
+This is due to how the moment.js library is being packaged [currently](https://github.com/ant-design/ant-design/issues/4972#issuecomment-281235293). The date values must always be present for the components in order for the date to be displayed correctly. A bug report has been filed with the `antd` library [here](https://github.com/ant-design/ant-design/issues/6712).
 
 Here is a workaround for now:
 
