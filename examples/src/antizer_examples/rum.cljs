@@ -54,7 +54,15 @@
     (ant/card {:bordered true :class "card-photo"} 
       [:div [:img {:src "https://unsplash.it/330/120/?random"}]]
       (ant/col {:span 12} [:div [:h3 "Please rate me"]])
-      (ant/col {:span 12} (ant/rate)))])
+      (ant/col {:span 12} (ant/rate))) [:br]
+    (ant/card {:style {:width "300"}
+               :cover [:img {:alt "example" :src "https://unsplash.it/400/300/?random"}]
+               :actions [(ant/icon {:type "setting"}) 
+                         (ant/icon {:type "edit"})
+                         (ant/icon {:type "ellipsis"})]}
+      (ant/card-meta {:avatar (ant/avatar {:src "https://unsplash.it/40/40/?random"})
+                      :title "Card Title"
+                      :description "This is the description"}))])
 
 (defn carousel []
   [:div
@@ -272,8 +280,8 @@
 (defn content-area []
   (ant/layout-content {:class "content-area"}
     (ant/row {:gutter 12}
-     (render-example [carousel buttons messages timeline tree progress])
-     (render-example [card tooltip notifications auto-complete localization modal avatar]))
+     (render-example [carousel buttons messages tooltip notifications timeline tree progress])
+     (render-example [card auto-complete localization modal avatar]))
     (render-full-row form-example)
     (render-full-row datatable)))
 

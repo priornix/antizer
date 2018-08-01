@@ -100,12 +100,13 @@ After compilation, open up the respective HTML page in the `examples/resources` 
 ## Changes
 
 ### 0.3.0
-* Updated antd library to [3.7.1](https://ant.design/changelog#3.7.1) [#16](https://github.com/priornix/antizer/pull/16) thx [@sctianwei](https://github.com/sctianwei), [@piotr-yuxuan](https://github.com/piotr-yuxuan)
+* Updated antd library to [3.7.1](https://ant.design/changelog#3.7.1). [#16](https://github.com/priornix/antizer/pull/16) thx [@sctianwei](https://github.com/sctianwei), [@piotr-yuxuan](https://github.com/piotr-yuxuan)
 * Fixed autocomplete example for empty string.
 * Fixed layout issue in examples.
 * Removed known issue for DatePicker and Calendar components.
-* Added props argument to reagent.create-form [#12](https://github.com/priornix/antizer/pull/12)
+* Added props argument to reagent.create-form. [#12](https://github.com/priornix/antizer/pull/12)
 thx [@AndreasKlein](https://github.com/AndreasKlein)
+* Added Card.Meta example.
 
 ### 0.2.2
 * Updated antd library to [2.12.3](https://ant.design/changelog#2.12.3).
