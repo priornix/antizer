@@ -20,10 +20,12 @@
         [ant/auto-complete
           ;; we need to use dataSource instead of data-source, see README.MD
           {:style {:width "80%"} :dataSource @data
-           :on-search
-             (fn [x]
-               (reset! data 
-                 (take 3 (iterate #(str % (string/reverse %)) x)))) 
+           :on-search 
+            (fn [x]
+              (reset! data
+                (if (empty? x)
+                  []
+                  (take 3 (iterate #(str % (string/reverse %)) x)))))
            :placeholder "Enter something"}]])))
 
 (defn avatar []
@@ -142,7 +144,7 @@
               [ant/select-option {:value "ja_JP"} "日本語"]
               [ant/select-option {:value "tlh" :disabled true} "Klingon"]]]
           [ant/pagination {:total 40 :show-size-changer true}] [:br]
-          [ant/date-picker {:format "ddd MMM Do YYYY" :default-value (js/moment) :style {:width "60%"} :allow-clear false :show-today false}] [:br] [:br]
+          [ant/date-picker {:format "ddd MMM Do YYYY" :default-value (js/moment) :style {:width "60%"} :show-today false}] [:br] [:br]
           [ant/time-picker {:style {:width "60%"}}] [:br] [:br]
           [ant/calendar {:fullscreen false :default-value (js/moment)}]
           [ant/table {:columns common/columns}]]])))

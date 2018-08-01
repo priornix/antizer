@@ -26,7 +26,7 @@ To use antizer, just add the following to your `project.clj`:
 
 [source,clojure]
 ----
-[antizer "0.2.2"]
+[antizer "0.3.0"]
 ----
 
 You would also need to add the ClojureScript React library that you will be using.
@@ -464,10 +464,6 @@ After compilation, open up the respective HTML page in the `examples/resources` 
 * The table or auto complete component is not displaying the data.
 
 include::common/data-props.adoc[tags=text]
-
-* The text within the DatePicker and Calendar components are displayed in an incorrect language.
-
-Please refer to this known issue and workaround https://github.com/priornix/antizer#known-issues[here].
 
 == Acknowledgement
 

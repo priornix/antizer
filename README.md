@@ -1,7 +1,5 @@
 # antizer
 
-[![Clojars Project](https://img.shields.io/clojars/v/org.clojars.elvn/antizer.svg)](https://clojars.org/org.clojars.elvn/antizer)
-
 Antizer is a ClojureScript library implementing [Ant Design](https://ant.design/) React components for [Reagent](https://github.com/reagent-project/reagent) and [Rum](https://github.com/tonsky/rum). 
 
 Ant Design is an enterprise-class UI design language and React-based implementation with the following features:
@@ -35,7 +33,7 @@ Please let me know if you are using Antizer within your project, and I will glad
 To use Antizer, add the following to your project.clj:
 
 ```clojure
-[antizer "0.2.2"]
+[antizer "0.3.0"]
 ```
 
 You would also need to add the ClojureScript React library that you will be using.
@@ -101,6 +99,12 @@ After compilation, open up the respective HTML page in the `examples/resources` 
 
 ## Changes
 
+### 0.3.0
+* Updated antd library to [3.7.1](https://ant.design/changelog#3.7.1) thx [@sctianwei](https://github.com/sctianwei)
+* Fixed autocomplete example for empty string.
+* Fixed layout issue in examples.
+* Removed known issue for DatePicker and Calendar components.
+
 ### 0.2.2
 * Updated antd library to [2.12.3](https://ant.design/changelog#2.12.3).
 * Fixed resource typo in README.md and documentation. [#1](https://github.com/priornix/antizer/issues/1) thx [@weavejester](https://github.com/weavejester)
@@ -118,14 +122,7 @@ After compilation, open up the respective HTML page in the `examples/resources` 
 
 ## Known Issues
 
-#### DatePicker and Calendar date text are not displayed in the correct language when no date value has been set.
-
-This is due to how the moment.js library is being packaged [currently](https://github.com/ant-design/ant-design/issues/4972#issuecomment-281235293). The date values must always be present for the components in order for the date to be displayed correctly. A bug report has been filed with the `antd` library [here](https://github.com/ant-design/ant-design/issues/6712). 
-
-Here is a workaround for now:
-
-* Set default-value to a moment object ie: `:default-value (js/moment)` when using the DatePicker or Calendar component.
-* Disable the clear date feature by setting `:allow-clear` to `false`.
+None
 
 ## Acknowledgement
 

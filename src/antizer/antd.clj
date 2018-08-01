@@ -30,6 +30,7 @@
                   DatePicker.RangePicker
                   DatePicker.WeekPicker
                   Divider
+                  Drawer
                   Dropdown
                   Dropdown.Button
                   Form
@@ -101,11 +102,12 @@
              message.loading
              message.success
              message.warn
+             message.warning
              Modal.confirm
              Modal.error
              Modal.info
              Modal.success
-             Modal.warn
+             Modal.warning
              notification.close
              notification.config
              notification.destroy
@@ -113,7 +115,8 @@
              notification.info
              notification.open
              notification.success
-             notification.warn])
+             notification.warn
+             notification.warning])
 
 (def form-funcs '[getFieldDecorator
                   getFieldError

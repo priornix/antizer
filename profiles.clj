@@ -1,6 +1,6 @@
 {:examples
-   {:dependencies [[reagent "0.7.0"]
-                   [rum "0.10.8"]]
+   {:dependencies [[reagent "0.8.1"]
+                   [rum "0.11.2"]]
     :plugins [[lein-cljsbuild "1.1.5"]]
     :resource-paths ["examples/resources"]
     :source-paths ["examples/src"]
@@ -28,8 +28,8 @@
 
  :examples-dev
    [:examples
-     {:dependencies [[figwheel-sidecar "0.5.10"]]
-      :plugins [[lein-figwheel "0.5.10"]]
+     {:dependencies [[figwheel-sidecar "0.5.16"]]
+      :plugins [[lein-figwheel "0.5.16"]]
       :figwheel {:css-dirs ["examples/resources/css"]}
       :cljsbuild
        {:builds
