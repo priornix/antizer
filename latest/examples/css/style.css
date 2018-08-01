@@ -7,6 +7,10 @@
     color: #fff;
 }
 
+.banner h2 {
+    margin-bottom: 0px;
+}
+
 .banner-logo {
     position: relative;
     top: 5px;
@@ -20,7 +24,7 @@
 .content-area {
     min-height: 800px;
     background: #fff;
-    padding: 20px 20px
+    padding: 20px 20px;
 }
 
 .box {
@@ -34,11 +38,11 @@
 }
 
 .card {
-    height: 100px
+    height: 120px;
 }
 
 .card-photo {
-    height: 180px
+    height: 180px;
 }
 
 .example-button .ant-btn {

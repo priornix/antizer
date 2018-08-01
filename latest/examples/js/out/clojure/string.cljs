@@ -26,7 +26,12 @@
 
 (defn- replace-all
   [s re replacement]
-  (.replace s (js/RegExp. (.-source re) "g") replacement))
+  (let [r (js/RegExp. (.-source re)
+                      (cond-> "g"
+                        (.-ignoreCase re) (str "i")
+                        (.-multiline re) (str "m")
+                        (.-unicode re) (str "u")))]
+    (.replace s r replacement)))
 
 (defn- replace-with
   [f]
@@ -96,10 +101,7 @@
   "Converts first character of the string to upper-case, all other
   characters to lower-case."
   [s]
-  (if (< (count s) 2)
-    (upper-case s)
-    (str (upper-case (subs s 0 1))
-         (lower-case (subs s 1)))))
+  (gstring/capitalize s))
 
 ;; The JavaScript split function takes a limit argument but the return
 ;; value is not the same as the Java split function.
