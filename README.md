@@ -101,9 +101,9 @@ After compilation, open up the respective HTML page in the `examples/resources` 
 
 ### 0.2.2
 * Updated antd library to [2.12.3](https://ant.design/changelog#2.12.3).
-* Fixed resource typo in README.md and documentation.
-* Added missing components: Breadcumb.Item.
-* Added new component: Input.TextArea.
+* Fixed resource typo in README.md and documentation. [#1](https://github.com/priornix/antizer/issues/1) thx [@weavejester](https://github.com/weavejester)
+* Added missing component: Breadcrumb.Item. [#2](https://github.com/priornix/antizer/issues/2) thx [@weavejester](https://github.com/weavejester)
+* Added new component: Input.TextArea. [#3](https://github.com/priornix/antizer/issues/3) thx [@mbuczko](https://github.com/mbuczko)
 * Fixed layout issue in examples.
 * Added note on DatePicker and Calendar known issues.
 
