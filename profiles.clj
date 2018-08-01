@@ -1,5 +1,5 @@
 {:examples
-   {:dependencies [[reagent "0.6.1"]
+   {:dependencies [[reagent "0.7.0"]
                    [rum "0.10.8"]]
     :plugins [[lein-cljsbuild "1.1.5"]]
     :resource-paths ["examples/resources"]
