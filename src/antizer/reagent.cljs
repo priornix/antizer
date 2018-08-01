@@ -10,14 +10,15 @@
    "Calls Form.create() decorator with the form to be created. form can be
     any hiccup form. Accepts the following options:
 
-    :options - map of Form.create() options. Refer to: 
-               https://ant.design/components/form/#Form.create(options) for
-               details
-    :props - map of props to be provided to the form component"
+    * :options - map of Form.create() options. Refer to: 
+                 https://ant.design/components/form/#Form.create(options) for
+                 details
+    * :props - the properties hashmap to be passed to the component. Note that 
+               the received properties will be in the form of a JavaScript associative map"
   [form & {:keys [options props] :or {options {} props {}}}]
   (r/create-element
     (((getValueByKeys js/antd "Form" "create") (clj->js (ant/map-keys->camel-case options)))
-      (r/reactify-component form))
+     (r/reactify-component form))
     (clj->js props)))
 
 (defn get-form
