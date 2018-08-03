@@ -20,10 +20,12 @@
         [ant/auto-complete
           ;; we need to use dataSource instead of data-source, see README.MD
           {:style {:width "80%"} :dataSource @data
-           :on-search
-             (fn [x]
-               (reset! data 
-                 (take 3 (iterate #(str % (string/reverse %)) x)))) 
+           :on-search 
+            (fn [x]
+              (reset! data
+                (if (empty? x)
+                  []
+                  (take 3 (iterate #(str % (string/reverse %)) x)))))
            :placeholder "Enter something"}]])))
 
 (defn avatar []
@@ -49,10 +51,19 @@
     [:h2 "Cards"]
     [ant/card {:title "Title" :bordered true :class "card"}
       [:p "Not the usual lorem ipsum"]] [:br]
-    [ant/card {:bordered true :class "card-photo"} 
+    [ant/card {:bordered true :class "card-photo"}
       [:div [:img {:src "https://unsplash.it/330/120/?random"}]]
       [ant/col {:span 12} [:div [:h3 "Please rate me"]]]
-      [ant/col {:span 12} [ant/rate]]]])
+      [ant/col {:span 12} [ant/rate]]] [:br]
+    [ant/card {:style {:width "300"}
+               :cover (r/as-element
+                        [:img {:alt "example" :src "https://unsplash.it/400/300/?random"}])
+               :actions [(r/as-element [ant/icon {:type "setting"}])
+                         (r/as-element [ant/icon {:type "edit"}])
+                         (r/as-element [ant/icon {:type "ellipsis"}])]}
+      [ant/card-meta {:avatar (r/as-element [ant/avatar {:src "https://unsplash.it/40/40/?random"}])
+                      :title "Card title"
+                      :description "This is the description"}]]])
 
 (defn carousel []
   [:div
@@ -142,7 +153,7 @@
               [ant/select-option {:value "ja_JP"} "日本語"]
               [ant/select-option {:value "tlh" :disabled true} "Klingon"]]]
           [ant/pagination {:total 40 :show-size-changer true}] [:br]
-          [ant/date-picker {:format "ddd MMM Do YYYY" :default-value (js/moment) :style {:width "60%"} :allow-clear false :show-today false}] [:br] [:br]
+          [ant/date-picker {:format "ddd MMM Do YYYY" :default-value (js/moment) :style {:width "60%"} :show-today false}] [:br] [:br]
           [ant/time-picker {:style {:width "60%"}}] [:br] [:br]
           [ant/calendar {:fullscreen false :default-value (js/moment)}]
           [ant/table {:columns common/columns}]]])))
@@ -269,8 +280,8 @@
 (defn content-area []
   [ant/layout-content {:class "content-area"}
     [ant/row {:gutter 12}
-      (render-example [carousel buttons messages timeline tree progress])
-      (render-example [card tooltip notifications auto-complete localization modal avatar])
+      (render-example [carousel buttons messages tooltip notifications timeline tree progress])
+      (render-example [card auto-complete localization modal avatar])
       (render-full-row form-example)
       (render-full-row datatable)]])
 

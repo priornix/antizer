@@ -1,4 +1,5 @@
 (ns antizer.rum
+  (:refer-clojure :exclude [list])
   (:require [antizer.core :as ant]
             [goog.object :refer [getValueByKeys]]
             [rum.core])
@@ -37,7 +38,7 @@
                  https://ant.design/components/form/#Form.create(options) for
                  details
     * :props - the properties hashmap to be passed to the component during the `:init` 
-               stage. Note that the recieved properties will be in the form of a 
+               stage. Note that the received properties will be in the form of a
                JavaScript associative map"
   [form & {:keys [options props] :or {options {} props {}}}]
   (js/React.createElement

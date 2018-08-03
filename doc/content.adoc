@@ -26,7 +26,7 @@ To use antizer, just add the following to your `project.clj`:
 
 [source,clojure]
 ----
-[antizer "0.2.2"]
+[antizer "0.3.0"]
 ----
 
 You would also need to add the ClojureScript React library that you will be using.
@@ -99,10 +99,10 @@ TIP: It is not recommended to render to the <body> element. This is only done fo
 In order to be consistent with ClojureScript naming conventions, all functions and properties are specified in lisp case 
 (aka https://en.wikipedia.org/wiki/Naming_convention_%28programming%29#Multiple-word_identifiers[kebab-case]), eg: on-click, wrapper-col
 
-The Ant design component, functions and property have been translated to kebab-case, via the following rules:
+The Ant design components, functions and properties have been translated to kebab-case, via the following rules:
 
-1. Replace all instances of `.` with `-`
-2. Insert a dash before any uppercase letters, except for the first letter.
+1. Replace all instances of `.` with `-`.
+2. Except for the first letter, insert a dash before any uppercase letters, unless there already is a dash before this letter.
 3. Convert the whole string to lowercase.
 
 .Example of name mappings
@@ -159,7 +159,7 @@ Example for rum:
 (ant/message-info "Hello World!")
 ----
 
-The full list of the Ant Design function names can be found https://github.com/priornix/antizer/blob/master/src/antizer/antd.clj#L82[here].
+The full list of the Ant Design functions can be found https://github.com/priornix/antizer/blob/master/src/antizer/antd.clj#L85[here].
 
 ==== Components 
 
@@ -464,10 +464,6 @@ After compilation, open up the respective HTML page in the `examples/resources` 
 * The table or auto complete component is not displaying the data.
 
 include::common/data-props.adoc[tags=text]
-
-* The text within the DatePicker and Calendar components are displayed in an incorrect language.
-
-Please refer to this known issue and workaround https://github.com/priornix/antizer#known-issues[here].
 
 == Acknowledgement
 
