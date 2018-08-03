@@ -14,7 +14,7 @@ https://ant.design/[Ant Design] is an enterprise-class UI design language and Re
 * A set of high-quality React components out of the box.
 * Extensive well-documented API and examples.
 
-Antizer is a ClojureScript library for Ant Design React components with bindings for Reagent and Rum. 
+Antizer is a ClojureScript library for Ant Design React components with bindings for https://github.com/reagent-project/reagent[Reagent] and https://github.com/tonsky/rum[Rum]. 
 
 == Status
 
@@ -43,10 +43,26 @@ For Rum:
 [rum "X.Y.Z"]
 ----
 
-It is also necessary to include the Ant Design CSS stylesheet in your HTML page. The CSS files can be obtained from the following classpaths:
+[[install-css-files]]
 
-* `cljsjs/antd/development/antd.inc.css`
-* `cljsjs/antd/production/antd.min.inc.css`
+It is also necessary to include the relevant Ant Design CSS stylesheet in your HTML page. There are two ways that the CSS files can be included:
+
+1. Loading the CSS stylesheet from an external CDN:
++
+[source,xml]
+----
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/${antd_version}/antd.min.css">
+----
++
+where `${antd_version}` must be the same antd library version as the one that Antizer is using.
+
+
+2. Alternatively, the CSS sheetsheet can be loaded from either of the following classpaths. This can be done via https://github.com/ring-clojure/ring[Ring] library's https://ring-clojure.github.io/ring/ring.middleware.resource.html[wrap-resource] function:
++
+  * `cljsjs/antd/development/antd.inc.css`
+  * `cljsjs/antd/production/antd.min.inc.css`
++
+An example of how this can be done is illustrated by https://github.com/dfuenzalida/antizer-demo.
 
 You can also follow the instructions for customization with LESS https://ant.design/docs/react/customize-theme[here].
 
@@ -68,11 +84,11 @@ For Reagent:
 (require '[antizer.reagent :as ant])
 (require '[reagent.core :as r])
 
-(defn render []
+(defn click-me []
   [ant/button {:on-click #(ant/message-info "Hello Reagent!")} "Click me"])
 
 (defn init! []
-  (r/render [render] (.-body js/document)))
+  (r/render [click-me] (.-body js/document)))
 ----
 
 For Rum:
@@ -81,14 +97,14 @@ For Rum:
 (require '[antizer.rum :as ant])
 (require '[rum.core :as rum])
 
-(defn render []
+(defn click-me []
   (ant/button {:on-click #(ant/message-info "Hello Rum!")} "Click me"))
 
 (defn init! []
-  (rum/mount (render) (.-body js/document)))
+  (rum/mount (click-me) (.-body js/document)))
 ----
 
-IMPORTANT: Please remember to include the CSS stylesheet https://cdnjs.com/libraries/antd[here], otherwise the components would not be styled correctly.
+IMPORTANT: Please remember to include the CSS stylesheet using one of the methods specified <<install-css-files,here>>, otherwise the components would not be styled correctly.
 
 TIP: It is not recommended to render to the <body> element. This is only done for illustrative purposes. 
 

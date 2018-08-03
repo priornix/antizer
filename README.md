@@ -48,10 +48,22 @@ For Rum:
 [rum "X.Y.Z"]
 ```
 
-It is also necessary to include the Ant Design CSS stylesheet in your HTML page. The CSS files can be obtained from the following classpaths:
+It is also necessary to include the relevant Ant Design CSS stylesheet in your HTML page. There are two ways that the CSS files can be included:
+
+1. Loading the CSS stylesheet from an external CDN:
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/${antd_version}/antd.min.css">
+```
+
+where `${antd_version}` must be the same antd library version as the one that Antizer is being linked to.
+
+2. Alternatively, the CSS sheetsheet can be loaded from either of the following classpaths. This can be done via [Ring](https://github.com/ring-clojure/ring) library's [wrap-resource](https://ring-clojure.github.io/ring/ring.middleware.resource.html) function:
 
 * `cljsjs/antd/development/antd.inc.css`
 * `cljsjs/antd/production/antd.min.inc.css`
+
+An example of how this can be done is provided by https://github.com/dfuenzalida/antizer-demo.
 
 You can also follow the instructions for customization with LESS [here](https://ant.design/docs/react/customize-theme).
 
@@ -62,11 +74,11 @@ For Reagent:
 (require '[antizer.reagent :as ant])
 (require '[reagent.core :as r])
 
-(defn render []
+(defn click-me []
   [ant/button {:on-click #(ant/message-info "Hello Reagent!")} "Click me"])
 
 (defn init! []
-  (r/render [render] (.-body js/document)))
+  (r/render [click-me] (.-body js/document)))
 ```
 
 For Rum:
@@ -74,11 +86,11 @@ For Rum:
 (require '[antizer.rum :as ant])
 (require '[rum.core :as rum])
 
-(defn render []
+(defn click-me []
   (ant/button {:on-click #(ant/message-info "Hello Rum!")} "Click me"))
 
 (defn init! []
-  (rum/mount (render) (.-body js/document)))
+  (rum/mount (click-me) (.-body js/document)))
 ```
 
 ## Examples
@@ -99,6 +111,10 @@ After compilation, open up the respective HTML page in the `examples/resources` 
 
 ## Changes
 
+### 0.3.1
+* Added documentation on loading CSS files.
+* Added Card.Meta example.
+
 ### 0.3.0
 * Updated antd library to [3.7.1](https://ant.design/changelog#3.7.1). [#16](https://github.com/priornix/antizer/pull/16) thx [@sctianwei](https://github.com/sctianwei), [@piotr-yuxuan](https://github.com/piotr-yuxuan)
 * Fixed autocomplete example for empty string.
@@ -106,7 +122,6 @@ After compilation, open up the respective HTML page in the `examples/resources` 
 * Removed known issue for DatePicker and Calendar components.
 * Added props argument to reagent.create-form. [#12](https://github.com/priornix/antizer/pull/12)
 thx [@AndreasKlein](https://github.com/AndreasKlein)
-* Added Card.Meta example.
 
 ### 0.2.2
 * Updated antd library to [2.12.3](https://ant.design/changelog#2.12.3).
