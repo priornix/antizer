@@ -26,7 +26,8 @@ All the Ant Design components should be fully functional and production-ready. I
 
 ### Who's Using Antizer
 
-Please let me know if you are using Antizer within your project, and I will gladly add that in here.
+* [Gooreplacer](https://github.com/jiacai2050/gooreplacer/blob/master/README-en.md)
+* [History Master](https://github.com/jiacai2050/history-master)
 
 ## Usage
 
@@ -112,7 +113,7 @@ After compilation, open up the respective HTML page in the `examples/resources` 
 ## Changes
 
 ### 0.3.1
-* Updated antd library to [3.8.0](https://ant.design/changelog#3.8.0)
+* Updated antd library to [3.8.0](https://ant.design/changelog#3.8.0).
 * Added documentation on loading CSS files. [#11](https://github.com/priornix/antizer/issues/11)
 * Added Card.Meta example.
 * Fixed Form example.
