@@ -3,18 +3,18 @@
   (:require [antizer.core :as ant]
             [goog.object :refer [getValueByKeys]]
             [reagent.core :as r])
-  (:require-macros [antizer.macros :refer [export-funcs export-props export-form-funcs 
+  (:require-macros [antizer.macros :refer [export-funcs export-props export-form-funcs
                                            export-reagent-components]]))
 
 (defn create-form
-   "Calls Form.create() decorator with the form to be created. form can be
-    any hiccup form. Accepts the following options:
+  "Calls Form.create() decorator with the form to be created. form can be
+   any hiccup form. Accepts the following options:
 
-    * :options - map of Form.create() options. Refer to: 
-                 https://ant.design/components/form/#Form.create(options) for
-                 details
-    * :props - the properties hashmap to be passed to the component. Note that 
-               the received properties will be in the form of a JavaScript associative map"
+   * :options - map of Form.create() options. Refer to: 
+                https://ant.design/components/form/#Form.create(options) for
+                details
+   * :props - the properties hashmap to be passed to the component. Note that
+              the received properties will be in the form of a JavaScript associative map"
   [form & {:keys [options props] :or {options {} props {}}}]
   (r/create-element
     (((getValueByKeys js/antd "Form" "create") (clj->js (ant/map-keys->camel-case options)))

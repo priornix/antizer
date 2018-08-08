@@ -14,7 +14,7 @@ https://ant.design/[Ant Design] is an enterprise-class UI design language and Re
 * A set of high-quality React components out of the box.
 * Extensive well-documented API and examples.
 
-Antizer is a ClojureScript library for Ant Design React components with bindings for https://github.com/reagent-project/reagent[Reagent] and https://github.com/tonsky/rum[Rum]. 
+https://github.com/priornix/antizer[Antizer] is a ClojureScript library for Ant Design React components with bindings for https://github.com/reagent-project/reagent[Reagent] and https://github.com/tonsky/rum[Rum].
 
 == Status
 
@@ -26,7 +26,7 @@ To use antizer, just add the following to your `project.clj`:
 
 [source,clojure]
 ----
-[antizer "0.3.0"]
+[antizer "0.3.1"]
 ----
 
 You would also need to add the ClojureScript React library that you will be using.

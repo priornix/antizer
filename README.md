@@ -1,6 +1,6 @@
 # antizer
 
-Antizer is a ClojureScript library implementing [Ant Design](https://ant.design/) React components for [Reagent](https://github.com/reagent-project/reagent) and [Rum](https://github.com/tonsky/rum). 
+Antizer is a ClojureScript library implementing [Ant Design](https://ant.design/) React components for [Reagent](https://github.com/reagent-project/reagent) and [Rum](https://github.com/tonsky/rum).
 
 Ant Design is an enterprise-class UI design language and React-based implementation with the following features:
 
@@ -33,7 +33,7 @@ Please let me know if you are using Antizer within your project, and I will glad
 To use Antizer, add the following to your project.clj:
 
 ```clojure
-[antizer "0.3.0"]
+[antizer "0.3.1"]
 ```
 
 You would also need to add the ClojureScript React library that you will be using.
@@ -112,8 +112,11 @@ After compilation, open up the respective HTML page in the `examples/resources` 
 ## Changes
 
 ### 0.3.1
-* Added documentation on loading CSS files.
+* Updated antd library to [3.8.0](https://ant.design/changelog#3.8.0)
+* Added documentation on loading CSS files. [#11](https://github.com/priornix/antizer/issues/11)
 * Added Card.Meta example.
+* Fixed Form example.
+* Minor fomatting changes to docstring.
 
 ### 0.3.0
 * Updated antd library to [3.7.1](https://ant.design/changelog#3.7.1). [#16](https://github.com/priornix/antizer/pull/16) thx [@sctianwei](https://github.com/sctianwei), [@piotr-yuxuan](https://github.com/piotr-yuxuan)
