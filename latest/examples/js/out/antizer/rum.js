@@ -57,14 +57,14 @@ return antizer.rum.adapt_class.cljs$core$IFn$_invoke$arity$variadic(G__17125,seq
 
 /**
  * Calls Form.create() wrapper with the form to be created. `form` should
- *  be a `(rum.core/defcs)` component. Accepts the following options:
+ * be a `(rum.core/defcs)` component. Accepts the following options:
  * 
- *  * :options - map of Form.create() options. Refer to: 
- *               https://ant.design/components/form/#Form.create(options) for
- *               details
- *  * :props - the properties hashmap to be passed to the component during the `:init` 
- *             stage. Note that the received properties will be in the form of a
- *             JavaScript associative map
+ * * :options - map of Form.create() options. Refer to: 
+ *              https://ant.design/components/form/#Form.create(options) for
+ *              details
+ * * :props - the properties hashmap to be passed to the component during the `:init` 
+ *            stage. Note that the received properties will be in the form of a
+ *            JavaScript associative map
  */
 antizer.rum.create_form = (function antizer$rum$create_form(var_args){
 var args__9808__auto__ = [];
