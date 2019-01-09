@@ -25,6 +25,8 @@
                   Col
                   Collapse
                   Collapse.Panel
+                  Comment
+                  ConfigProvider
                   DatePicker
                   DatePicker.MonthPicker
                   DatePicker.RangePicker
@@ -33,6 +35,7 @@
                   Drawer
                   Dropdown
                   Dropdown.Button
+                  Empty
                   Form
                   Form.Item
                   Icon
@@ -70,6 +73,7 @@
                   Select
                   Select.OptGroup
                   Select.Option
+                  Skeleton
                   Slider
                   Spin
                   Steps
@@ -108,6 +112,7 @@
              Modal.info
              Modal.success
              Modal.warning
+             Modal.open
              notification.close
              notification.config
              notification.destroy
