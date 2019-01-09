@@ -125,12 +125,13 @@
               [ant/switch])]
           (if display-buttons?
             [ant/form-item {:wrapper-col {:offset 6}}
-              [ant/col {:span 4}
-                [ant/button {:type "primary" :on-click #(ant/validate-fields form)}
-                  "Submit"]]
-              [ant/col {:offset 1}
-                [ant/button {:on-click #(ant/reset-fields form)}
-                  "Reset"]]])])))
+              [ant/row
+                [ant/col {:span 4}
+                  [ant/button {:type "primary" :on-click #(ant/validate-fields form)}
+                    "Submit"]]
+                [ant/col {:offset 1}
+                  [ant/button {:on-click #(ant/reset-fields form)}
+                    "Reset"]]]])])))
 
 (defn form-example []
   [:div 

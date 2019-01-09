@@ -1,3 +1,1 @@
 Note that each locale to be used has to be included using `require` seperately.
-
-IMPORTANT: Due to how the moment.js library is being integrated with Ant Design, the DatePicker and Calendar components must be initialized in a certain way for the text to be displayed in the correct language. Please refer to https://github.com/priornix/antizer#known-issues[this] for the workaround.
