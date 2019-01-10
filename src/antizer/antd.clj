@@ -94,6 +94,7 @@
                   Tree
                   TreeSelect
                   TreeSelect.TreeNode
+                  Tree.DirectoryTree
                   Tree.TreeNode
                   Upload])
 
