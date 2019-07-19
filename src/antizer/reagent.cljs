@@ -1,5 +1,5 @@
 (ns antizer.reagent
-  (:refer-clojure :exclude [list])
+  (:refer-clojure :exclude [list empty comment])
   (:require [antizer.core :as ant]
             [goog.object :refer [getValueByKeys]]
             [reagent.core :as r])

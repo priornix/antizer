@@ -25,22 +25,27 @@
                   Col
                   Collapse
                   Collapse.Panel
+                  Comment
+                  ConfigProvider
                   DatePicker
                   DatePicker.MonthPicker
                   DatePicker.RangePicker
                   DatePicker.WeekPicker
+                  Descriptions
+                  Descriptions.Item
                   Divider
                   Drawer
                   Dropdown
                   Dropdown.Button
+                  Empty
                   Form
                   Form.Item
                   Icon
                   Input
                   Input.Group
+                  InputNumber
                   Input.Search
                   Input.TextArea
-                  InputNumber
                   Layout
                   Layout.Content
                   Layout.Footer
@@ -52,12 +57,14 @@
                   LocaleProvider
                   Mention
                   Mention.Nav
+                  Mentions
                   Menu
                   Menu.Divider
                   Menu.Item
                   Menu.ItemGroup
                   Menu.SubMenu
                   Modal
+                  PageHeader
                   Pagination
                   Popconfirm
                   Popover
@@ -70,8 +77,10 @@
                   Select
                   Select.OptGroup
                   Select.Option
+                  Skeleton
                   Slider
                   Spin
+                  Statistic
                   Steps
                   Steps.Step
                   Switch
@@ -82,16 +91,22 @@
                   Tabs.TabPane
                   Tag
                   Tag.CheckableTag
-                  TimePicker
                   Timeline
                   Timeline.Item
+                  TimePicker
                   Tooltip
                   Transfer
                   Tree
+                  Tree.DirectoryTree
                   TreeSelect
                   TreeSelect.TreeNode
                   Tree.TreeNode
-                  Upload])
+                  Typography
+                  Typography.Paragraph
+                  Typography.Text
+                  Typography.Title
+                  Upload
+                  Upload.Dragger])
 
 (def props '[locales])
 
