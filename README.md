@@ -28,6 +28,7 @@ All the Ant Design components should be fully functional and production-ready. I
 
 * [Gooreplacer](https://github.com/jiacai2050/gooreplacer/blob/master/README-en.md)
 * [History Master](https://github.com/jiacai2050/history-master)
+* [Ercoin](https://gitlab.com/Ercoin/ercoin-browser-wallet)
 
 ## Usage
 
