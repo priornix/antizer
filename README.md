@@ -112,6 +112,9 @@ After compilation, open up the respective HTML page in the `examples/resources` 
 
 ## Changes
 
+### 0.3.3
+* Updated antd library to [3.26.17](https://github.com/ant-design/ant-design/blob/3.x-stable/CHANGELOG.en-US.md#32617)
+
 ### 0.3.2
 * Updated antd library to [3.20.6](https://github.com/ant-design/ant-design/blob/3.x-stable/CHANGELOG.en-US.md#3206). thx [Christoph Frick](https://github.com/christoph-frick), [Kelvin Jiang](https://github.com/kevindragon)
 
