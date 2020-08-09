@@ -112,21 +112,18 @@ After compilation, open up the respective HTML page in the `examples/resources` 
 
 ## Changes
 
-### 3.20.6-0
-* Updated antd library to [3.20.6](https://ant.design/changelog#3.20.6).
-
-### 3.19.8-0
-* Updated antd library to [3.19.8](https://ant.design/changelog#3.19.8).
+### 0.3.2
+* Updated antd library to [3.20.6](https://github.com/ant-design/ant-design/blob/3.x-stable/CHANGELOG.en-US.md#3206). thx [Christoph Frick](https://github.com/christoph-frick), [Kelvin Jiang](https://github.com/kevindragon)
 
 ### 0.3.1
-* Updated antd library to [3.8.0](https://ant.design/changelog#3.8.0).
+* Updated antd library to [3.8.0](https://github.com/ant-design/ant-design/blob/3.x-stable/CHANGELOG.en-US.md#380).
 * Added documentation on loading CSS files. [#11](https://github.com/priornix/antizer/issues/11)
 * Added Card.Meta example.
 * Fixed Form example.
 * Minor fomatting changes to docstring.
 
 ### 0.3.0
-* Updated antd library to [3.7.1](https://ant.design/changelog#3.7.1). [#16](https://github.com/priornix/antizer/pull/16) thx [@sctianwei](https://github.com/sctianwei), [@piotr-yuxuan](https://github.com/piotr-yuxuan)
+* Updated antd library to [3.7.1](https://github.com/ant-design/ant-design/blob/3.x-stable/CHANGELOG.en-US.md#380). [#16](https://github.com/priornix/antizer/pull/16) thx [@sctianwei](https://github.com/sctianwei), [@piotr-yuxuan](https://github.com/piotr-yuxuan)
 * Fixed autocomplete example for empty string.
 * Fixed layout issue in examples.
 * Removed known issue for DatePicker and Calendar components.

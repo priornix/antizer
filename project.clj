@@ -1,4 +1,4 @@
-(defproject antizer "3.20.6-0"
+(defproject antizer "0.3.2"
   :description "Antizer"
   :url "https://github.com/priornix/antizer"
   :license {:name "Eclipse Public License"
