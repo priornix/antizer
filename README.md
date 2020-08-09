@@ -34,7 +34,7 @@ All the Ant Design components should be fully functional and production-ready. I
 To use Antizer, add the following to your project.clj:
 
 ```clojure
-[antizer "0.3.1"]
+[antizer "3.20.6-0"]
 ```
 
 You would also need to add the ClojureScript React library that you will be using.
@@ -111,6 +111,12 @@ lein with-profile +examples-dev figwheel
 After compilation, open up the respective HTML page in the `examples/resources` folder in your browser.
 
 ## Changes
+
+### 3.20.6-0
+* Updated antd library to [3.20.6](https://ant.design/changelog#3.20.6).
+
+### 3.19.8-0
+* Updated antd library to [3.19.8](https://ant.design/changelog#3.19.8).
 
 ### 0.3.1
 * Updated antd library to [3.8.0](https://ant.design/changelog#3.8.0).
