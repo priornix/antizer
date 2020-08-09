@@ -34,7 +34,7 @@ All the Ant Design components should be fully functional and production-ready. I
 To use Antizer, add the following to your project.clj:
 
 ```clojure
-[antizer "3.20.6-0"]
+[antizer "0.3.3"]
 ```
 
 You would also need to add the ClojureScript React library that you will be using.
